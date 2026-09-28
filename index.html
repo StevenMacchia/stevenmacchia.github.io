@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Steven Macchia · Trust & Safety leader</title>
-<meta name="description" content="Steven Macchia, Trust & Safety leader. Practical, free tools that help product and safety teams keep people safe online.">
-<meta property="og:type" content="website"><meta property="og:title" content="Steven Macchia · Trust & Safety leader"><meta property="og:description" content="Steven Macchia, Trust & Safety leader. Practical, free tools that help product and safety teams keep people safe online.">
+<meta name="description" content="Steven Macchia, Head of Global Compliance and Trust & Safety at Medal. 10+ years building Trust & Safety programs from zero to one, plus free tools for product and safety teams.">
+<meta property="og:type" content="website"><meta property="og:title" content="Steven Macchia · Trust & Safety leader"><meta property="og:description" content="Steven Macchia, Head of Global Compliance and Trust & Safety at Medal. 10+ years building Trust & Safety programs from zero to one, plus free tools for product and safety teams.">
 <meta property="og:url" content="https://stevenmacchia.com/"><meta property="og:image" content="https://stevenmacchia.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="627">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/og-image.png">
 <meta name="theme-color" content="#0D1022">
@@ -63,21 +63,57 @@ h2{margin:0;font-size:clamp(28px,4vw,40px);letter-spacing:-.025em;line-height:1.
 .principles p{margin:0;color:var(--muted);font-size:15px}
 footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--faint);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-@media (max-width:860px){.feature{grid-template-columns:1fr}.grid,.principles{grid-template-columns:1fr}.grid > :last-child{grid-column:auto}.hero-in{padding:40px 0 64px}section{padding:64px 0}}
+.sub{margin:14px 0 0;font-size:17px;line-height:1.55;color:var(--muted);max-width:640px}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:40px}
+.proof div{padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.proof b{display:block;font-size:30px;letter-spacing:-.02em;line-height:1.1;margin-bottom:4px}
+.proof span{display:block;font-size:14px;line-height:1.45;color:var(--muted)}
+.exp-grid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:24px;align-items:start}
+.exp{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:20px;background:var(--card)}
+.exp li{display:grid;grid-template-columns:112px minmax(0,1fr);gap:18px;padding:20px 22px;border-top:1px solid var(--line)}
+.exp li:first-child{border-top:0}
+.exp time{color:var(--faint);font-size:14px;font-weight:500;padding-top:2px;white-space:nowrap}
+.exp h3{margin:0;font-size:17px;line-height:1.35;letter-spacing:-.01em}
+.exp .org{color:var(--acc);font-weight:600;font-size:14px}
+.exp p{margin:6px 0 0;color:var(--muted);font-size:15px}
+.focus{padding:22px;border:1px solid var(--line);border-radius:20px;background:var(--card)}
+.focus h3{margin:0 0 12px;font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:14px;color:#D5D7F0}
+.focus .btn{margin-top:20px}
+@media (max-width:860px){.feature,.exp-grid{grid-template-columns:1fr}.grid,.principles,.proof{grid-template-columns:1fr}.grid > :last-child{grid-column:auto}.hero-in{padding:40px 0 64px}section{padding:64px 0}.exp li{grid-template-columns:1fr;gap:4px}.proof{margin-top:32px}}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <header class="hero"><div class="wrap">
-  <nav><span class="mark" aria-hidden="true">SM</span><a href="#work">Work</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://github.com/stevenmacchia">GitHub</a></nav>
+  <nav><span class="mark" aria-hidden="true">SM</span><a href="#experience">Experience</a><a href="#work">Work</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://github.com/stevenmacchia">GitHub</a></nav>
   <div class="hero-in">
     <p class="eyebrow">Trust & Safety leader</p>
     <h1>Steven Macchia</h1>
-    <p class="lead">I build practical tools that help product and safety teams keep people safe online, and I share them free.</p>
-    <div class="cta"><a class="btn primary" href="https://stevenmacchia.com/ts-workbench/">Open T&amp;S Workbench →</a><a class="btn" href="https://stevenmacchia.com/ts-workbench/#demo">Explore the demo company</a><a class="btn" href="https://www.linkedin.com/in/stevenmacchia">Connect on LinkedIn</a></div>
+    <p class="lead">Head of Global Compliance and Trust &amp; Safety at Medal. For more than 10 years I've built Trust &amp; Safety programs from zero to one: policy, moderation operations, child safety, privacy and AI-assisted enforcement.</p>
+    <p class="sub">I also build practical tools that help product and safety teams keep people safe online, and I share them free.</p>
+    <div class="cta"><a class="btn primary" href="https://stevenmacchia.com/ts-workbench/">Open T&amp;S Workbench →</a><a class="btn" href="#experience">See my experience</a><a class="btn" href="https://www.linkedin.com/in/stevenmacchia">Connect on LinkedIn</a></div>
+    <div class="proof"><div><b>Billions</b><span>of videos, images and posts moderated each month by the Trust & Safety function I built</span></div><div><b>50%</b><span>less policy-violating content after I rebuilt the standards and enforcement behind it</span></div><div><b>$1M+</b><span>a year in projected savings from a user reputation system I led from zero to one</span></div></div>
   </div>
 </div></header>
 <main>
+  <section id="experience"><div class="wrap">
+    <div class="sec-h"><h2>Experience</h2><p>10+ years in Trust &amp; Safety</p></div>
+    <div class="exp-grid">
+      <ol class="exp">
+        <li><time>2024 – now</time><div><h3>Head of Global Compliance and Trust &amp; Safety</h3><span class="org">Medal</span><p>Lead compliance and Trust &amp; Safety for high-volume UGC platforms: AI-assisted moderation, privacy (GDPR, CCPA, DSA), youth safety, CSAM escalations with NCMEC and law enforcement, and AI vendor governance.</p></div></li>
+        <li><time>2022 – 2024</time><div><h3>Program Manager and Safety Manager, Trust &amp; Safety</h3><span class="org">Medal</span><p>Built the foundational Trust &amp; Safety programs for a gaming platform handling millions of uploads a day: Community Standards, enforcement guidance, escalation workflows and the company's partnership with NCMEC. Led a user reputation system from zero to one.</p></div></li>
+        <li><time>2020 – 2022</time><div><h3>Program Manager, Community Operations</h3><span class="org">Medal</span><p>Built Medal's first Trust &amp; Safety team, alongside its community, social and support functions. Wrote the Community Standards and enforcement playbooks from scratch and cut policy-violating content by half.</p></div></li>
+        <li><time>2017 – 2020</time><div><h3>Trust &amp; Safety Team Lead, then Supervisor</h3><span class="org">Cognizant</span><p>Led three content moderation teams of up to 60 people and sent urgent policy guidance across a site of more than 300 moderators.</p></div></li>
+      </ol>
+      <aside class="focus">
+        <h3>What I work on</h3>
+        <div class="chips"><span>Policy and enforcement</span><span>Moderation operations</span><span>AI-assisted moderation</span><span>Child and youth safety</span><span>NCMEC and law enforcement</span><span>Privacy: GDPR, CCPA, DSA</span><span>Vendor governance</span><span>Escalations and crisis response</span></div>
+        <a class="btn" href="https://www.linkedin.com/in/stevenmacchia">Full history on LinkedIn →</a>
+      </aside>
+    </div>
+  </div></section>
   <section id="work"><div class="wrap">
     <div class="sec-h"><h2>Featured project</h2><p>Free, private, and nothing leaves your browser</p></div>
     <div class="feature">
