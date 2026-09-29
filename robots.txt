@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stevenmacchia.com/sitemap.xml
