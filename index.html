@@ -11,11 +11,11 @@
 <meta property="og:type" content="website"><meta property="og:title" content="Steven Macchia · Trust & Safety leader"><meta property="og:description" content="Steven Macchia, Trust & Safety leader. 10+ years in Trust & Safety and online communities, including building a Trust & Safety function from zero. Free tools for product and safety teams.">
 <meta property="og:url" content="https://stevenmacchia.com/"><meta property="og:image" content="https://stevenmacchia.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/og-image.png">
-<meta name="theme-color" content="#121212">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%224%22%20fill%3D%22%23121212%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#6D5DF6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%236D5DF6%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap">
 <style>
 :root{--bg:#FFFFFF;--panel:#F3F2EF;--ink:#121212;--muted:#595959;--line:#DDDAD4;--strong:#B9B5AD;--blue:#1A47B8;--good:#067647}
 *{box-sizing:border-box}
@@ -118,6 +118,32 @@ footer .fine{grid-column:1/-1;margin-top:28px;font-size:13px;color:#A8A6A1;displ
 .more a:hover{text-decoration:underline}
 .top a[aria-current="page"]{font-weight:600}
 .top a.name{color:var(--ink);font-weight:600;margin-right:auto;text-decoration:none}
+
+/* ---------- Aurora: the same light as the workbench. Tokens, the wash, frosted panels, Inter, one violet accent ---------- */
+:root{--bg:#F7F8FC;--panel:rgba(255,255,255,.72);--ink:#15172B;--muted:#636A85;--line:rgba(21,23,43,.10);--strong:rgba(21,23,43,.22);--blue:#6D5DF6;--good:#1FA971;--navy:#10121F;
+  --wash:radial-gradient(900px 420px at 72% -10%, rgba(109,93,246,.26), transparent 62%), radial-gradient(700px 380px at 22% 0%, rgba(255,160,120,.26), transparent 60%);
+  --shadow:0 1px 1px rgba(21,23,43,.04), 0 10px 30px rgba(21,23,43,.07)}
+body{background:var(--wash), var(--bg);background-repeat:no-repeat;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{letter-spacing:-.022em}
+h1{background:linear-gradient(100deg, var(--ink) 35%, var(--blue) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.top{border-bottom-color:var(--line)}
+.top .mark{width:14px;height:14px;border-radius:4px;background:linear-gradient(135deg,#6D5DF6,#FF9A7A)}
+.btn{border-radius:10px;border-color:var(--line);background:#fff;box-shadow:0 1px 2px rgba(21,23,43,.05)}
+.btn:hover{background:#fff;border-color:var(--strong);box-shadow:var(--shadow)}
+.btn.primary,.btn.primary:hover{background:linear-gradient(135deg,#6D5DF6,#9B6BFF);border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(109,93,246,.35)}
+.btn.primary:hover{background:linear-gradient(135deg,#7A6BFF,#A77DFF)}
+.open{border-top-color:var(--line)}
+.open .sq,.focus li::before{border-radius:50%;background:var(--blue)}
+.photo,.show-frame{border-radius:14px}
+.show-frame{border-color:var(--line);box-shadow:var(--shadow)}
+.show,.hb{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.sec-h{border-top-color:var(--line)}
+.show-tabs button[aria-selected="true"]{color:var(--blue)}
+.show-tabs button:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.posts h3 a{text-decoration-color:var(--strong)}
+.posts h3 a:hover{text-decoration-color:var(--blue)}
+footer{background:var(--navy);background-image:radial-gradient(700px 300px at 80% 120%, rgba(109,93,246,.35), transparent 60%)}
+footer .fine{color:#A0A6C0}
 .page-h{padding:72px 0 56px}
 .page-h h1{font-size:clamp(40px,5.5vw,64px);max-width:18ch}
 .wr .sec-h h2{font-size:28px;line-height:1.12}
@@ -191,7 +217,7 @@ footer .fine{grid-column:1/-1;margin-top:28px;font-size:13px;color:#A8A6A1;displ
       <div class="hb"><p class="lbl" style="margin:0">The T&amp;S Handbook · 19 of 19 chapters drafted</p><h3>From the first hire to a regulated program at scale</h3><p>19 chapters in 4 parts, each paired with a free Workbench tool and built on ten principles from my writing.</p><ol><li><i>1</i>Before the first hire</li><li><i>2</i>Build</li><li><i>3</i>Run</li><li><i>4</i>Scale and govern</li></ol><p>Updated Oct 4, 2026 · <a href="https://stevenmacchia.com/ts-handbook/updates/">What changed</a></p><a class="go" href="https://stevenmacchia.com/ts-handbook/">Read the handbook →</a></div>
       <div><p class="lbl" style="margin:0 0 8px">Recent writing</p><ol class="posts">
         <li><time>Oct 2, 2026</time><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7511792474445750272-3rLV/">Run the abuse pre-mortem at design review</a></h3><p>At design review, changing a default is a quick edit. After launch it means taking something away. T&amp;S earns the invite by being selective and fast, and accepted risks get an owner and a date.</p></div></li>
-        <li><time>Oct 2, 2026</time><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/">Watch the rate, not the volume</a></h3><p>In Stream's live sports chat data, volume swung 7.5x but the rate of racist content held steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.</p></div></li>
+        <li><time>Oct 2, 2026</time><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/">Watch the rate, not the volume</a></h3><p>In live sports chat, volume swings hard while the rate of abusive content tends to hold steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.</p></div></li>
         <li><time>Oct 1, 2026</time><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-gamedev-userretention-share-7511499525035847680-wRsb/">Harassed players look like your best-retained users</a></h3><p>Raw retention data hides the cost of toxicity because harassed players are the most engaged. A matched cohort shows it, and safety exposure belongs on the retention dashboard.</p></div></li>
         <li><time>Sep 30, 2026</time><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-onlinesafety-share-7511067864448237568-k7h4/">Grooming is a pattern, not a message</a></h3><p>Responses build as signals stack on adult-to-minor contact, with thresholds tested on past cases, a queue worked by risk, privacy limits agreed up front, and four numbers that show it works.</p></div></li>
       </ol><div class="more"><a href="writing/">All writing →</a><a href="https://www.linkedin.com/in/stevenmacchia">Follow on LinkedIn</a></div></div>
