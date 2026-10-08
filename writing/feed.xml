@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://stevenmacchia.com/writing/feed.xml</id>
+  <title>Writing · Steven Macchia</title>
+  <subtitle>What changed in Trust &amp; Safety and why it matters: Steven Macchia on child safety, age assurance, automation and platform compliance. An archive to read, not just a list of links.</subtitle>
+  <link href="https://stevenmacchia.com/writing/feed.xml" rel="self"/>
+  <link href="https://stevenmacchia.com/writing/"/>
+  <updated>2026-10-08T15:06:11.894Z</updated>
+  <author><name>Steven Macchia</name><email>stevenamacchia@gmail.com</email></author>
+  <entry>
+    <id>https://stevenmacchia.com/writing/what-i-d-tell-myself-in-year-one-of-trust-and-safety/</id>
+    <title>What I'd tell myself in year one of Trust &amp; Safety</title>
+    <link href="https://stevenmacchia.com/writing/what-i-d-tell-myself-in-year-one-of-trust-and-safety/"/>
+    <published>2026-10-08T15:06:11.894Z</published>
+    <updated>2026-10-08T15:06:11.894Z</updated>
+    <summary>Five lessons from more than ten years in the field: treat safety as a systems problem built into the product, don't treat a ban as a closed case, measure what users experience rather than how busy the team was, let automation earn its scope, and give every risk one named owner.</summary>
+    <content type="html">&lt;p&gt;More than ten years in Trust &amp;amp; Safety, across social media, gaming and user-generated content. The work changed a lot in that time. My view of it changed more. If I could sit down with myself in year one, this is what I'd say.&lt;/p&gt;
+&lt;p&gt;1. You can't moderate your way out of a systems problem. Reputation, account history, age and behavior signals belong in one risk model, and safety belongs in the product from the start.&lt;/p&gt;
+&lt;p&gt;2. A ban doesn't close the case. The people you remove come back on fresh accounts, so map the network around them and watch for the return.&lt;/p&gt;
+&lt;p&gt;3. Measure what users experience, not how busy the team was. Removals and queue counts show activity, while exposure to harm and repeat offenders show impact.&lt;/p&gt;
+&lt;p&gt;4. Automation earns its scope. It takes on more only when its decisions hold up on appeal as well as people's do, and a person owns every call that can't be undone.&lt;/p&gt;
+&lt;p&gt;5. Every risk needs one named owner. When two teams think they share a harm, nobody owns it, and you find that out during the incident.&lt;/p&gt;
+&lt;p&gt;All five still shape how I'd build a Trust &amp;amp; Safety team today, whatever the platform.&lt;/p&gt;
+&lt;p&gt;What would you tell your first-year self in this work? I'd like to read yours, especially the ones I missed.&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #OnlineSafety #ContentModeration #Leadership&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/financial-sextortion-moves-in-hours-so-start-with-what-the-teen-sees/</id>
+    <title>Financial sextortion moves in hours, so start with what the teen sees</title>
+    <link href="https://stevenmacchia.com/writing/financial-sextortion-moves-in-hours-so-start-with-what-the-teen-sees/"/>
+    <published>2026-10-07T14:54:46.448Z</published>
+    <updated>2026-10-07T14:54:46.448Z</updated>
+    <summary>Financial sextortion can go from first contact to a payment demand inside a day, too fast for grooming detection built for weeks. Start with defaults that limit who can message a teen and notices about strangers, then a fast, shame-free response with an on-call emergency referral and a CyberTipline report.</summary>
+    <content type="html">&lt;p&gt;Most grooming detection is built for patterns that play out over weeks. Financial sextortion doesn't give you weeks. An account posing as another teenager makes contact, asks for an image almost right away, then demands money and threatens to send it to the teen's friends and family. It can happen inside a day.&lt;/p&gt;
+&lt;p&gt;NCMEC received an average of 137 financial sextortion reports a day in 2025, many involving teenage boys. It knows of at least three dozen teenage boys in the US who died by suicide after being targeted. If I were setting priorities, I'd start with what the teen sees in that first conversation.&lt;/p&gt;
+&lt;p&gt;Defaults first. Either under-18s can't get messages from accounts they aren't connected to, as Ofcom's UK codes already expect of higher-risk services, or new accounts get a hard cap on how many minors they can message. Then a notice when the sender is a stranger or seems to be in another country. Some real friendships will start slower, and messages from new accounts to minors they don't know will drop, which is the point. I'd take that trade, and agree with product up front how we'll measure it.&lt;/p&gt;
+&lt;p&gt;When a teen reports, they need a fast, shame-free answer: this isn't your fault, don't pay, and NCMEC's Take It Down can help get images removed. Staff it like the urgent queue it is, with someone on call at 2am who can make an emergency referral. In the US it's also a mandatory CyberTipline report, so flag any suicide risk in it.&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #ChildSafety #OnlineSafety #SafetyByDesign&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/what-i-m-reading-an-open-policy-model-xbox-s-adult-checks-discord-in-brazil-and-kosa/</id>
+    <title>What I'm reading: an open policy model, Xbox's adult checks, Discord in Brazil and KOSA</title>
+    <link href="https://stevenmacchia.com/writing/what-i-m-reading-an-open-policy-model-xbox-s-adult-checks-discord-in-brazil-and-kosa/"/>
+    <published>2026-10-07T11:08:30.988Z</published>
+    <updated>2026-10-07T11:08:30.988Z</updated>
+    <summary>An open-weights model that scores a message against your written policy in milliseconds (Musubi's PolicyLM-1.7B, which the Workbench's classifier eval can now run), Xbox marking some long-time accounts as adults from their account activity, a Brazilian interim order for Discord to add age verification and parental supervision, and KOSA now needing a recorded Senate vote.</summary>
+    <content type="html">&lt;p&gt;Few T&amp;amp;S things I'm reading today:&lt;/p&gt;
+&lt;p&gt;- Musubi released PolicyLM-1.7B, an open-weights moderation model that takes your written policy and returns a decision in under 50ms. We've already added it to the Policy Stress Test on T&amp;amp;S Workbench so you can test your own policies against it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/eYcbF7ri&quot;&gt;https://lnkd.in/eYcbF7ri&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- Xbox is emailing longtime users saying it has marked their accounts as verified adults based on account history alone. Big age assurance move, and nobody is ever going to appeal being called an adult.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/eRRaQPEM&quot;&gt;https://lnkd.in/eRRaQPEM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- A Brazilian judge ordered Discord to strengthen its parental controls and age verification after a teen's death. The government's ~$100M lawsuit is still pending.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/emw3msrA&quot;&gt;https://lnkd.in/emw3msrA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- UK MP Jess Asato, who is suing xAI over Grok deepfakes, told the NYC Council it's a design flaw, not user misuse.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/e82Ht4x8&quot;&gt;https://lnkd.in/e82Ht4x8&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- KOSA is stuck again. Rand Paul blocked unanimous consent, and the House and Senate versions still have to be reconciled before Jan 3.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/e98KCQHX&quot;&gt;https://lnkd.in/e98KCQHX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;What's on your radar this week? Usually post this once a week but so much going on and the industry is moving so quickly now&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #OnlineSafety #AgeAssurance #ChildSafety #ContentModeration&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/if-a-regulator-asked-for-your-pre-launch-risk-record-tomorrow/</id>
+    <title>If a regulator asked for your pre-launch risk record tomorrow</title>
+    <link href="https://stevenmacchia.com/writing/if-a-regulator-asked-for-your-pre-launch-risk-record-tomorrow/"/>
+    <published>2026-10-06T14:45:06.704Z</published>
+    <updated>2026-10-06T14:45:06.704Z</updated>
+    <summary>Ofcom's investigation into whether Meta risk-assessed Instagram Instants before launch is a test any service with UK users could face. Do the assessment at design review with a named sign-off, decide how disappearing content gets reported, and file a dated record you could hand over within a day.</summary>
+    <content type="html">&lt;p&gt;If a regulator asked for your pre-launch risk record tomorrow, you should already know what it would show.&lt;/p&gt;
+&lt;p&gt;This week Ofcom opened an investigation into whether Meta carried out a suitable and sufficient illegal content risk assessment and children's risk assessment before launching Instagram Instants, where content disappears once viewed. It's an investigation, not a finding of a breach. Meta says it takes its obligations seriously, ran a risk analysis and briefed Ofcom on the feature several times before launch.&lt;/p&gt;
+&lt;p&gt;The Online Safety Act requires services to keep their risk assessments current, to do a fresh one before any significant change to the design or operation of the service, and to keep a written record of each. One feature launch is enough to put that to the test. If you have UK users, this is a question about your own process.&lt;/p&gt;
+&lt;p&gt;I'd want the assessment done at design review, in the same slot as the security review, with a named sign-off. By the time a feature is on a launch calendar, the decisions that create or remove risk have mostly been made. The abuse pre-mortem belongs where the design can still change.&lt;/p&gt;
+&lt;p&gt;Disappearing content deserves its own page. If something is gone after one view, the plain questions are how a user reports it afterwards and what my team can still see when they do. Whatever the answer, it's a design decision, and it needs an owner and a written mitigation before launch.&lt;/p&gt;
+&lt;p&gt;The record matters as much as the work. Every launch should leave a dated assessment behind it, with mitigations and the name against each one, filed so I could hand it over within a day. The assessment is product work. The record is the proof it was done.&lt;/p&gt;
+&lt;p&gt;Links in comments. Pre-mortum tool that I built in comments as well.&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #OnlineSafety #SafetyByDesign #ChildSafety #Compliance&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/what-i-m-reading-ofcom-and-instagram-instants-ofcom-s-data-demands-in-court-and-roblox-in-kansas/</id>
+    <title>What I'm reading: Ofcom and Instagram Instants, Ofcom's data demands in court, and Roblox in Kansas</title>
+    <link href="https://stevenmacchia.com/writing/what-i-m-reading-ofcom-and-instagram-instants-ofcom-s-data-demands-in-court-and-roblox-in-kansas/"/>
+    <published>2026-10-06T11:38:53.318Z</published>
+    <updated>2026-10-06T11:38:53.318Z</updated>
+    <summary>Ofcom is investigating whether Meta risk-assessed Instagram Instants before launch, and Meta, TikTok and X are challenging Ofcom's demands for moderation data in court. Kansas settled with Roblox for more than $10 million plus age checks and age-grouped chat, and OpenAI's own tests show its new EU text watermark weakens when 10% of the words are swapped.</summary>
+    <content type="html">&lt;p&gt;Lots going on in T&amp;amp;S this week. Here's what I'm reading:&lt;/p&gt;
+&lt;p&gt;- Ofcom is investigating Meta over Instagram Instants (the disappearing photo feature), asking whether they actually risk assessed it, including for kids, before it launched in May.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/emtugTf9&quot;&gt;https://lnkd.in/emtugTf9&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- Meta, TikTok and X are taking Ofcom to court over its data demands, things like how many posts got removed or downranked and how many people saw harmful content.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/eMuZrQaq&quot;&gt;https://lnkd.in/eMuZrQaq&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- Kansas AG got a $10M settlement out of Roblox over child safety.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/eMCmuYdE&quot;&gt;https://lnkd.in/eMCmuYdE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- KOSA stalled in the Senate again, and age assurance keeps getting pulled into the debate.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/e_uAPjHu&quot;&gt;https://lnkd.in/e_uAPjHu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- Consumer groups are pushing Congress to look into scams on tech platforms.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/ek__jbv2&quot;&gt;https://lnkd.in/ek__jbv2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- OpenAI is going to watermark ChatGPT and Codex text for EU users. They admit detection drops from about 92% to 66% if you swap out 10% of the words.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/eQdTMbge&quot;&gt;https://lnkd.in/eQdTMbge&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;What else should be on my list?&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #OnlineSafety&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/launch-week-is-the-hardest-test-a-safety-program-gets/</id>
+    <title>Launch week is the hardest test a safety program gets</title>
+    <link href="https://stevenmacchia.com/writing/launch-week-is-the-hardest-test-a-safety-program-gets/"/>
+    <published>2026-10-05T21:02:41.862Z</published>
+    <updated>2026-10-05T21:02:41.862Z</updated>
+    <summary>Most of what goes wrong in launch week is decided before day one. Pre-approve friction for new and unverified accounts, triage by severity, watch the rate of abuse rather than raw counts, and agree with product how much friction you'll accept, then review it after week one.</summary>
+    <content type="html">&lt;p&gt;Launch week is the hardest test a safety program gets, and most of what goes wrong is decided before day one.&lt;/p&gt;
+&lt;p&gt;New users arrive all at once, and so do (many of) the people who prey on them. In a game thats raids on the busiest chats and scams in trade and gifting. In a social app its strangers testing the new DMs. Much of it comes from the newest accounts.&lt;/p&gt;
+&lt;p&gt;Run the abuse review alongside the security review, and decide the friction before launch: slower posting and lower limits for brand-new accounts, tighter rules for anyone unverified. Get product and legal to approve the thresholds in advance, so nobody is hunting for sign-off at 2am on launch night. And when a raid hits, slow down the newest accounts instead of locking the room for everyone.&lt;/p&gt;
+&lt;p&gt;Reports will spike with the user count, so triage by severity, child safety and threats first. Read the rate of abuse per user, not the raw counts. A jump in the rate for one category is the signal, and it usually means something coordinated.&lt;/p&gt;
+&lt;p&gt;The necessary conversation is with product. Friction on new accounts slows real newcomers in the week you most want them to stay. Id rather have that argument a month out than on launch night. Agree how much friction youll accept and for how long, then review after week one what fired, what youd pre-approve next time and what it cost new users.&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #SafetyByDesign #ProductManagement #GamingSafety&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/since-2024-the-job-is-proving-it-works/</id>
+    <title>Since 2024, the job is proving it works</title>
+    <link href="https://stevenmacchia.com/writing/since-2024-the-job-is-proving-it-works/"/>
+    <published>2026-10-05T15:05:31.132Z</published>
+    <updated>2026-10-05T15:05:31.132Z</updated>
+    <summary>Since 2024 the question has moved from whether you have a policy to whether you can show it works: UK risk assessments that must be redone before significant changes, age assurance as the foundation, 48-hour removal of intimate images under the US TAKE IT DOWN Act, and free open-source tooling. Those duties land on different teams, so the leadership team should name one owner for the whole picture.</summary>
+    <content type="html">&lt;p&gt;Ask what changed in Trust  &amp;amp;  Safety since 2024 and most people say AI. Id say its what you have to prove. The question used to be whether you had a policy. Now its whether you can show it works.&lt;/p&gt;
+&lt;p&gt;Last month I wrote that you cant moderate your way out of a systems problem. That idea now comes with deadlines. Under the UK Online Safety Act, services with UK users owed written illegal content risk assessments by March 2025, and any significant change needs a fresh one before it ships. That last part turns a one-off filing into a record you have to keep current.&lt;/p&gt;
+&lt;p&gt;Age assurance is the foundation. Australia's social media minimum age of 16 took effect in December 2025, and the EU's July 2025 guidelines on minors recommend age estimation even where a platforms own minimum age is under 18. The method matters less than what each level of check unlocks, and since a threshold touches product, safety, legal and privacy at once, it needs one owner.&lt;/p&gt;
+&lt;p&gt;Removal runs on a clock too. Since May 2026 the US TAKE IT DOWN Act gives covered platforms 48 hours from a valid request to remove a nonconsensual intimate image, AI-made ones included. The tooling floor moved as well. ROOST launched in February 2025 and publishes free open-source review tools, open-weight models can classify content against a written policy, and were too small is a weaker answer now.&lt;/p&gt;
+&lt;p&gt;If a CEO asked me where to start, Id ask who owns all four before I picked one. In most companies the risk assessment sits with Legal, the age checks with Product and the takedown inbox with Support, and nobody sees them side by side until a regulator does.&lt;/p&gt;
+&lt;p&gt;The fix is one owner for the whole picture, named by the leadership team and agreed out loud, so nobody assumes someone else has it.&lt;/p&gt;
+&lt;p&gt;If you can't name that person today, start there. It's cheaper than finding out from a regulator.&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #OnlineSafety #AgeAssurance #SafetyByDesign #Compliance&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/saturday-reading-child-safety-gaps-in-games-ofcom-in-court-and-california-s-new-laws/</id>
+    <title>Saturday reading: child safety gaps in games, Ofcom in court and California's new laws</title>
+    <link href="https://stevenmacchia.com/writing/saturday-reading-child-safety-gaps-in-games-ofcom-in-court-and-california-s-new-laws/"/>
+    <published>2026-10-03T12:06:59.334Z</published>
+    <updated>2026-10-03T12:06:59.334Z</updated>
+    <summary>Australia's eSafety found Fortnite and Minecraft still mostly rely on self-declared age. Age assurance is the foundation, because every other safeguard assumes you know who's a kid.</summary>
+    <content type="html">&lt;p&gt;What I'm reading in Trust &amp;amp; Safety with my Saturday morning coffee ☕&lt;/p&gt;
+&lt;p&gt;1. BBC: Australia finds &amp;quot;significant&amp;quot; child safety gaps on Steam, Roblox, Fortnite and Minecraft&lt;/p&gt;
+&lt;p&gt;eSafety found Fortnite and Minecraft still mostly rely on self-declared age, and Valve was the only one not using industry-standard tech to detect known harmful content. Age assurance is the foundation here, because every other safeguard assumes you know who's a kid.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/er_Tce7u&quot;&gt;https://lnkd.in/er_Tce7u&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2. Meta, X, and TikTok are challenging Ofcom’s information requests under the Online Safety Act in court. They are seeking a hearing on Monday. If the powers of regulators are limited, they will end up relying on platforms’ word instead of verifying the information.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/er9CyBNS&quot;&gt;https://lnkd.in/er9CyBNS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3. KATV: Experts Raise Concerns About California’s New Online Safety Laws for Children&lt;/p&gt;
+&lt;p&gt;The new regulations prohibit addictive feeds and mandate AI intervention when self-harm signals are detected. However, some mental health experts express skepticism about their effectiveness. While mandating “detect and intervene” is straightforward, accurately identifying and addressing self-harm in a child at 2 am presents significant challenges.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lnkd.in/ewnyJr26&quot;&gt;https://lnkd.in/ewnyJr26&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;What's on your reading list this weekend?&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #OnlineSafety #GamingSafety #AgeAssurance #ChildSafety&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/watch-the-rate-not-the-volume/</id>
+    <title>Watch the rate, not the volume</title>
+    <link href="https://stevenmacchia.com/writing/watch-the-rate-not-the-volume/"/>
+    <published>2026-10-02T15:37:22.135Z</published>
+    <updated>2026-10-02T15:37:22.135Z</updated>
+    <summary>In live sports chat, volume swings hard while the rate of abusive content tends to hold steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.</summary>
+    <content type="html">&lt;p&gt;Kenzie Wilson at Stream published a super interesting article with a week of moderation data from live sports chat during the NFL season. (A guilty pleasure read, because I love football)&lt;/p&gt;
+&lt;p&gt;Chat volume swung 7.5x across a single day, but the rate of racist content stayed between 65 and 100 per 1,000 enforcement actions at every hour. Game day added about 3%.&lt;/p&gt;
+&lt;p&gt;Kenzie's takeaway is that most of this comes down to capacity and configuration, and I agree. A steady rate also makes a good baseline. On a high volume night, volume goes up and the rate stays put. If the rate for one category climbs while volume is normal, that usually means something coordinated, like a raid or a group targeting one player.&lt;/p&gt;
+&lt;p&gt;I'd set up an alert on that rate. Something simple works to start: if a category sits well above its usual level for that hour for 15 minutes or so, page whoever's on call.&lt;/p&gt;
+&lt;p&gt;When it goes off, locking the room isn't a great first move in the middle of a big game. It punishes thousands of fans for what a few hundred accounts are doing. Kenzie found about half the accounts flagged each day are new, so I'd start by slowing down posting for accounts less than a week old. That catches most of the people causing it and leaves everyone else alone.&lt;/p&gt;
+&lt;p&gt;To know if it's working, I'd look at how fast the team acts once an alert goes off, and how many alerts turn out to be real coordinated activity. If most of them end up being a reaction to something in the game, the threshold is set too low.&lt;/p&gt;
+&lt;p&gt;Thanks to Kenzie for sharing real numbers!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/run-the-abuse-pre-mortem-at-design-review/</id>
+    <title>Run the abuse pre-mortem at design review</title>
+    <link href="https://stevenmacchia.com/writing/run-the-abuse-pre-mortem-at-design-review/"/>
+    <published>2026-10-02T14:21:28.903Z</published>
+    <updated>2026-10-02T14:21:28.903Z</updated>
+    <summary>At design review, changing a default is a quick edit. After launch it means taking something away. T&amp;S earns the invite by being selective and fast, and accepted risks get an owner and a date.</summary>
+    <content type="html">&lt;p&gt;The best time to run an abuse pre-mortem, the session where a team works out how a feature could be misused before it ships, is at design review.&lt;/p&gt;
+&lt;p&gt;At that point, changing a default is easy. If new accounts shouldn't be able to message strangers, or should have a lower gifting cap in their first week, it's a quick edit to the spec. Once the feature has shipped and people are using it, the same change means taking something away from users, and that's a much harder decision to get through.&lt;/p&gt;
+&lt;p&gt;Being invited that early is something T&amp;amp;S earns. It means being selective: full reviews for launches that let strangers contact each other, move money or items between users, expose location, or change what minors can do, and a short checklist for everything else. It also means answers that come back in days. A review that slows every release won't stay in the launch plan for long.&lt;/p&gt;
+&lt;p&gt;Some safeguards cost the feature its own metric. A gifting limit on new accounts will reduce gifting, and buy-in is difficult (revenue is king). Agreeing the exit criteria up front keeps the follow-up simple.&lt;/p&gt;
+&lt;p&gt;If a launch goes ahead with a known risk, the person who owns the product outcome signs off on it, with a date to revisit. T&amp;amp;S makes sure the risk is in front of them when they decide, and takes it to the exec who owns safety risk when it's too serious to be one person's call.&lt;/p&gt;
+&lt;p&gt;For the program itself, one method is to track how many incidents in a features' first 90 days the review predicted, and how many accepted risks turned into incidents. If that second number keeps climbing, risks are being accepted at too low a level.&lt;/p&gt;
+&lt;p&gt;I built a free tool for running a pre-mortem at design stage. Link in the comments.&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #SafetyByDesign #ProductManagement #GameDev&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/harassed-players-look-like-your-best-retained-users/</id>
+    <title>Harassed players look like your best-retained users</title>
+    <link href="https://stevenmacchia.com/writing/harassed-players-look-like-your-best-retained-users/"/>
+    <published>2026-10-01T18:57:24.344Z</published>
+    <updated>2026-10-01T18:57:24.344Z</updated>
+    <summary>Raw retention data hides the cost of toxicity because harassed players are the most engaged. A matched cohort shows it, and safety exposure belongs on the retention dashboard.</summary>
+    <content type="html">&lt;p&gt;Pull the raw retention data at most game studios and harassed players look like some of the best-retained users.&lt;/p&gt;
+&lt;p&gt;They chat more, queue more and play longer, so they run into more abuse. A team that stops there concludes toxicity doesnt hurt retention, and the safety budget conversation ends before it starts.&lt;/p&gt;
+&lt;p&gt;Studies tell us more.&lt;/p&gt;
+&lt;p&gt;Take This and Nielsen found 61% of players have skipped spending in a game because of how other players treated them (THATS A MASSIVE REVENUE HIT), and 60% have quit a match or a game over harassment. But surveys rarely move a budget. A studios own data does, if its cut correctly.&lt;/p&gt;
+&lt;p&gt;The cut that works is a matched cohort. Take new players whose early sessions included an actioned incident, and compare their 7- and 30-day return against new players with clean sessions, matched on playtime, mode, region and platform. Without the matching, the analysis measures engagement instead of harm.&lt;/p&gt;
+&lt;p&gt;The same blind spot affects enforcement on high-value players. Banning a top spender hits the revenue report the next day, while the players they drove away stay invisible unless someone builds the cohort.&lt;/p&gt;
+&lt;p&gt;Numbers worth tracking:&lt;/p&gt;
+&lt;p&gt;- Share of new players whose first five matches include an actioned incident&lt;/p&gt;
+&lt;p&gt;- D7 and D30 return for exposed new players vs the matched group&lt;/p&gt;
+&lt;p&gt;- Voice chat opt-out rate in a players first week&lt;/p&gt;
+&lt;p&gt;etc.&lt;/p&gt;
+&lt;p&gt;Safety exposure belongs as a standard cut on the retention dashboard, owned jointly by T&amp;amp;S and data teams and reviewed alongside every other churn driver. Surface level metrics don't tell the whole story.&lt;/p&gt;
+&lt;p&gt;2023 Take This + Nielsen study in comments&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #GameDev #Userretention #CommunityManagement&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/a-proper-introduction/</id>
+    <title>A proper introduction</title>
+    <link href="https://stevenmacchia.com/writing/a-proper-introduction/"/>
+    <published>2026-10-01T13:19:16.614Z</published>
+    <updated>2026-10-01T13:19:16.614Z</updated>
+    <summary>Who Steven is and what to expect: T&amp;S news with a practitioner's context, focused on child safety, age assurance, gaming and platform compliance, plus free tools.</summary>
+    <content type="html">&lt;p&gt;With so many new connections and followers over the past couple of weeks since posting about the state of Trust &amp;amp; Safety, a proper introduction may be due.&lt;/p&gt;
+&lt;p&gt;I am Steven Macchia, a Trust and Safety and compliance leader with more than 10 years of experience protecting users in online communities, mostly in social media, gaming, and user-generated content. I have built safety functions from the ground up, led global regulatory compliance, and worked closely on child safety and youth protection.&lt;/p&gt;
+&lt;p&gt;Why I decided to start writing on LinkedIn:&lt;/p&gt;
+&lt;p&gt;The online safety landscape is moving faster than ever. New laws are taking effect, regulators are acting on them, platforms are changing their policies, and new threats keep appearing. All of this is happening at once and is spread across dozens of sources.&lt;/p&gt;
+&lt;p&gt;Practitioners rarely have time to track all of it, but every piece of it affects the work.&lt;/p&gt;
+&lt;p&gt;My goal is simple: one clear, reliable place to see what changed in Trust and Safety and why it matters.&lt;/p&gt;
+&lt;p&gt;What you can expect here&lt;/p&gt;
+&lt;p&gt;- Regular posts on the most important Trust and Safety, online safety, and regulatory news&lt;/p&gt;
+&lt;p&gt;- Context and perspective from someone who gets their hands dirty with work, not just headlines&lt;/p&gt;
+&lt;p&gt;- A particular focus on child safety, age assurance, gaming, and platform compliance&lt;/p&gt;
+&lt;p&gt;- Free resources, including T&amp;amp;S Workbench, my set of tools for Trust and Safety professionals at stevenmacchia.com (WIP)&lt;/p&gt;
+&lt;p&gt;I would also like to hear from you. What topics should I cover more closely? What developments are you watching? Tell me in the comments. Some of the best insights in this field come from people doing the work every day - as bad actors are continually evolving.&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #OnlineSafety #ChildSafety #Compliance #ContentModeration&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/why-early-grooming-detection-matters/</id>
+    <title>Why early grooming detection matters</title>
+    <link href="https://stevenmacchia.com/writing/why-early-grooming-detection-matters/"/>
+    <published>2026-09-30T22:59:48.148Z</published>
+    <updated>2026-09-30T22:59:48.148Z</updated>
+    <summary>Tools that help platforms spot grooming early protect kids and the communities around them.</summary>
+    <content type="html">&lt;p&gt;This is why what Aiba is building matters. Tools that help platforms spot grooming early protect kids and the communities around them.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/launches-get-a-security-review-almost-none-get-an-abuse-review/</id>
+    <title>Launches get a security review. Almost none get an abuse review.</title>
+    <link href="https://stevenmacchia.com/writing/launches-get-a-security-review-almost-none-get-an-abuse-review/"/>
+    <published>2026-09-30T20:08:15.901Z</published>
+    <updated>2026-09-30T20:08:15.901Z</updated>
+    <summary>Introducing the free abuse pre-mortem: 12 questions, rated risks, safeguards with owners in priority order, likely laws, and a launch plan for Jira, Linear or GitHub.</summary>
+    <content type="html">&lt;p&gt;Most product launches get a security review. Almost none get an abuse review: who will misuse this, how, and what do we ship on day one to stop it.&lt;/p&gt;
+&lt;p&gt;So I built a free tool that does one in about three minutes.&lt;/p&gt;
+&lt;p&gt;You answer 12 plain questions about what you're building and who uses it.&lt;/p&gt;
+&lt;p&gt;It gives you:&lt;/p&gt;
+&lt;p&gt;→ The abuse risks that apply, rated by how severe and how likely&lt;/p&gt;
+&lt;p&gt;→ The safeguards to ship before launch, with an owner for each, in priority order&lt;/p&gt;
+&lt;p&gt;→ The laws that likely apply in your markets&lt;/p&gt;
+&lt;p&gt;→ A launch plan you can send straight to Jira, Linear or GitHub&lt;/p&gt;
+&lt;p&gt;It runs in your browser. Nothing you type leaves your device. (Unless you opt-in to Claude functionality on some tools)&lt;/p&gt;
+&lt;p&gt;No sign-up.There are worked examples for a marketplace, a dating app, a teen social app and a few others if you'd rather look before you answer anything.&lt;/p&gt;
+&lt;p&gt;Its part of a larger project Ill share more of soon. For now Id like to know where this one is wrong: which risks are missing, which safeguards are naive, what a real launch review would ask that this doesn't.&lt;/p&gt;
+&lt;p&gt;Link in the first comment.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/grooming-is-a-pattern-not-a-message/</id>
+    <title>Grooming is a pattern, not a message</title>
+    <link href="https://stevenmacchia.com/writing/grooming-is-a-pattern-not-a-message/"/>
+    <published>2026-09-30T14:22:08.427Z</published>
+    <updated>2026-09-30T14:22:08.427Z</updated>
+    <summary>Responses build as signals stack on adult-to-minor contact, with thresholds tested on past cases, a queue worked by risk, privacy limits agreed up front, and four numbers that show it works.</summary>
+    <content type="html">&lt;p&gt;Grooming in games almost never shows up in one message. It shows up as a pattern. An adult account friends a lot of younger players it has no connection to, gifts in-game currency early, asks about parents, moves the conversation to private voice, and eventually pushes for another app.&lt;/p&gt;
+&lt;p&gt;Each step can be innocent on its own, so the response has to build as signals stack. One signal on an adult-to-minor contact gets logged. Two or more in a short window add friction: gifting limits, a safety prompt, no new private channels. An off-platform request after that restricts contact and sends the full history to a trained reviewer.&lt;/p&gt;
+&lt;p&gt;Those thresholds should come from data, not instinct. Test them against past confirmed cases and past false alarms, set them where precision holds and the review team can keep pace, and revisit them every quarter, because offenders learn what triggers friction and route around it.&lt;/p&gt;
+&lt;p&gt;The hard calls happen when flagged relationships outnumber reviewers. Protective actions stay automatic through those weeks, and the queue gets worked by risk, starting with off-platform requests and players under 13. A restricted account waiting a day for review is a cost worth paying.&lt;/p&gt;
+&lt;p&gt;Privacy sets the other boundary. Limit pattern detection to adult-to-minor pairs, start with metadata before message content, agree retention limits with legal before launch, and check each region, since rules on scanning private messages vary, especially in the EU.&lt;/p&gt;
+&lt;p&gt;Four numbers show whether it works: time from first signal to protective action, share of confirmed cases caught before the off-platform move, precision at each step, and how long high-risk cases wait for review.&lt;/p&gt;
+&lt;p&gt;All of this gets tested the day a regulator, a parent or a court asks why a specific account was or wasnt restricted. That question is only answerable if one person owned the thresholds, each change was written down with the numbers behind it, and the decision to report to law enforcement was made by people trained for it.&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #ChildSafety #OnlineSafety #Gaming #ContentModeration&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/nudify-apps-harm-no-single-platform-sees-in-full/</id>
+    <title>Nudify apps: harm no single platform sees in full</title>
+    <link href="https://stevenmacchia.com/writing/nudify-apps-harm-no-single-platform-sees-in-full/"/>
+    <published>2026-09-29T18:46:20.700Z</published>
+    <updated>2026-09-29T18:46:20.700Z</updated>
+    <summary>The image is made on one service, the tool promoted on another and the harm lands on a third. That's why cross-platform signal sharing through Lantern matters.</summary>
+    <content type="html">&lt;p&gt;Nudify apps are a growing problem, and a clear example of harm no single platform sees in full. The image gets made on one service, the tool gets promoted on another, and the harm lands on a third.&lt;/p&gt;
+&lt;p&gt;Thats why signal sharing through Lantern matters. Glad to see the Tech Coalition getting this in front of a wider audience.  👏&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/age-assurance-what-should-each-check-unlock/</id>
+    <title>Age assurance: what should each check unlock?</title>
+    <link href="https://stevenmacchia.com/writing/age-assurance-what-should-each-check-unlock/"/>
+    <published>2026-09-29T18:13:24.004Z</published>
+    <updated>2026-09-29T18:13:24.004Z</updated>
+    <summary>The method matters less than what each level of assurance lets a user do. Errors aren't equal, accounts change hands, and someone has to own the thresholds.</summary>
+    <content type="html">&lt;p&gt;Most of the debate about age assurance in games is about which method to use. Face scans, IDs, parental consent. I think the more important question is what each one should let a user do.&lt;/p&gt;
+&lt;p&gt;Some methods that I've seen used and work: A birthday typed in at signup gets you locked-down defaults and not much else. An age estimate can open up text and voice chat with people your own age. Anything that lets an adult reach a minor privately should need a verified account or a parents sign-off. Friction goes where the risk is, and most users never feel it. (Obviously context and platform matter TREMENDOUSLY)&lt;/p&gt;
+&lt;p&gt;None of these methods is perfect, and the mistakes aren't equal. Put an adult in a teen group and they get annoyed, and some borrow a younger relatives account. Put a 15-year-old in an adult group and every protection built for them is gone. Optimizing for 13, 16 and 18 becomes one of the most important points.&lt;/p&gt;
+&lt;p&gt;Most age checks happen once, at sign-up or when a feature unlocks, but accounts don't stay with one person. They get shared, sold, or passed down to a younger sibling, and months later the person playing no longer matches the age on file.&lt;/p&gt;
+&lt;p&gt;Banning every account that looks off would hit a lot of legitimate users, and doing nothing leaves the gap open - these are off the table for most programs anyway. We can do way better. The better move is to put the account back on safer defaults right away and ask for a stronger check. The kid stays protected while it gets sorted out.&lt;/p&gt;
+&lt;p&gt;Someone also has to own these lines. Where the thresholds sit, and what evidence each one needs, affects product, safety, legal and privacy all at once. If nobody owns it, each team nudges it toward its own goals and nobody notices the drift. It deserves the same sign-off process as a policy change.&lt;/p&gt;
+&lt;p&gt;And completion rate is a weak metric on its own. Id rather know how many accounts in teen groups turn out to be adults, how many kids end up in adult groups, and how long it takes to catch an account thats changed hands.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/the-era-of-voluntary-child-safety-is-ending/</id>
+    <title>The era of voluntary child safety is ending</title>
+    <link href="https://stevenmacchia.com/writing/the-era-of-voluntary-child-safety-is-ending/"/>
+    <published>2026-09-29T11:45:56.591Z</published>
+    <updated>2026-09-29T11:45:56.591Z</updated>
+    <summary>India's push for age checks, Florida's case against OpenAI, Copilot data labeling, TikTok's Alabama settlement and Meta's New Mexico verdict. The question has moved from &quot;do you have a policy?&quot; to &quot;can you prove it works?&quot;</summary>
+    <content type="html">&lt;p&gt;The era of voluntary child safety is ending. Courts, attorneys general and regulators are turning platform promises into binding obligations. AI products are now in scope too. Here's what I'm reading this morning:&lt;/p&gt;
+&lt;p&gt;1/ India The Supreme Court said protections for under-18s on social media must carry legal force. The government is now looking at using the IT Intermediary Rules to require age verification and parental consent.&lt;/p&gt;
+&lt;p&gt;→ Another major market moves toward mandatory age assurance.&lt;/p&gt;
+&lt;p&gt;🔗 &lt;a href=&quot;https://lnkd.in/eb2cHuyR&quot;&gt;https://lnkd.in/eb2cHuyR&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2/ Florida vs. ChatGPT Floridas AG asked a court to temporarily halt ChatGPT development, citing COPPA violations and weak guardrails for minors.&lt;/p&gt;
+&lt;p&gt;→ AGs now treat GenAI like social platforms. AI age gating and safety evals need the same rigor as feeds.&lt;/p&gt;
+&lt;p&gt;🔗 &lt;a href=&quot;https://lnkd.in/e9NPz8ag&quot;&gt;https://lnkd.in/e9NPz8ag&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3/ Copilot data labeling 404 Media reports that Prolific contractors review Microsoft Copilot prompts and images for quality tuning. Many are sexual, and some involve minors.&lt;/p&gt;
+&lt;p&gt;→ Data labeling is moderation work. It needs the same wellbeing support and escalation paths.&lt;/p&gt;
+&lt;p&gt;🔗 &lt;a href=&quot;https://lnkd.in/e_5n5E4W&quot;&gt;https://lnkd.in/e_5n5E4W&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4/ TikTok and Alabama TikTok settled for at least $100M. It agreed to a 2-hour daily limit for minors, overnight restrictions and stronger parental controls.&lt;/p&gt;
+&lt;p&gt;→ Settlements are now writing product requirements. Expect other states to ask for the same terms.&lt;/p&gt;
+&lt;p&gt;🔗 &lt;a href=&quot;https://lnkd.in/eKZKXSxu&quot;&gt;https://lnkd.in/eKZKXSxu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5/ Meta in New Mexico A jury found Meta violated state consumer law more than 43M times with deceptive privacy claims. The penalty hearing is on Oct 1.&lt;/p&gt;
+&lt;p&gt;→ Your public safety claims are litigation evidence. What comms says has to match what enforcement actually does.&lt;/p&gt;
+&lt;p&gt;🔗 &lt;a href=&quot;https://lnkd.in/enTemq7Z&quot;&gt;https://lnkd.in/enTemq7Z&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The common thread: the question used to be Do you have a policy? Now its Can you prove it works? Which of these hits your roadmap first?&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #ContentModeration #OnlineSafety #ChildSafety #AISafety #AgeAssurance&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/games-are-where-kids-socialize-now-and-regulators-know-it/</id>
+    <title>Games are where kids socialize now, and regulators know it</title>
+    <link href="https://stevenmacchia.com/writing/games-are-where-kids-socialize-now-and-regulators-know-it/"/>
+    <published>2026-09-28T21:14:34.710Z</published>
+    <updated>2026-09-28T21:14:34.710Z</updated>
+    <summary>Grooming builds over weeks and usually moves off-platform. Protections that work act earlier and limit who can reach a child. Measure prevented contact, not just removals.</summary>
+    <content type="html">&lt;p&gt;Games have become one of the main places kids socialize online, and regulators and courts are starting to treat them that way.&lt;/p&gt;
+&lt;p&gt;In April, Australia's eSafety Commissioner sent legal notices to Roblox, Minecraft, Fortnite and Steam asking what they are doing to prevent grooming. The regulator noted that offenders often make first contact in a game and then move children to private messaging apps. In the US, LA County sued Roblox in February, and several state attorneys general have reached settlements with the company. The consolidated federal case over child abuse claims now includes 182 lawsuits.&lt;/p&gt;
+&lt;p&gt;Grooming in games rarely shows up in a single message. It builds over weeks through friend requests, gifted in-game currency, requests to keep things private, and eventually a push to move to another app. Moderation that reviews messages one at a time misses most of that.&lt;/p&gt;
+&lt;p&gt;So the protections most likely to work act earlier and look at patterns. Roblox now requires a facial age check to use chat, and adults can't message users under 16 by default. That limits who can reach a child in the first place. And because the riskiest step happens off-platform, sharing warning signs between platforms matters too. The Tech Coalition's Lantern program was built for that, and Roblox and Discord were among its founding members.&lt;/p&gt;
+&lt;p&gt;The gaming companies that make real progress here will be the ones that measure how often risky contact is prevented, alongside how much content gets removed.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/a-banned-account-is-not-a-closed-case/</id>
+    <title>A banned account is not a closed case</title>
+    <link href="https://stevenmacchia.com/writing/a-banned-account-is-not-a-closed-case/"/>
+    <published>2026-09-25T14:41:54.720Z</published>
+    <updated>2026-09-25T14:41:54.720Z</updated>
+    <summary>Online enticement is a pattern of contact, not a file, and is now mandatory to report. The hard call is the account: ban visibly, or restrict quietly while the network is mapped.</summary>
+    <content type="html">&lt;p&gt;Online enticement is now one of the fastest-growing categories NCMEC tracks. In 2025, the CyberTipline received 1.4 million enticement reports, up more than 150% from the year before. Part of that jump comes from the REPORT Act making enticement mandatory to report, and that's the point: platforms are now expected to report behavior, not just files.&lt;/p&gt;
+&lt;p&gt;That changes the enforcement problem. Much of CSAM detection is built around content you can hash and match. Enticement is a pattern of contact over time, and the decisions around it are harder, including when and how visibly to act on an account.&lt;/p&gt;
+&lt;p&gt;Detection is starting to catch up. Thorn has added a grooming label to its conversation-level classifier, Roblox has open-sourced Sentinel, the system it uses to surface early grooming patterns in chat, and companies like Aiba are building behavioral detection for various online communites. Thats great progress, but for platforms - means will facing harder account decision more often, not less.&lt;/p&gt;
+&lt;p&gt;Timing matters because of how offenders operate. Thorn's 2022 grooming research found that nearly two in three minors had been invited by an online-only contact to move a conversation to a private chat on a different platform, and groomers routinely use that move to isolate victims. A visible ban on one platform doesn't end that relationship, and it can speed up the move to a place where no one is watching.&lt;/p&gt;
+&lt;p&gt;None of this argues for leaving harmful material up. Content comes down, gets preserved, and gets reported, and a child in immediate danger comes first. NCMEC escalated more than 53,000 urgent or imminent-danger reports to law enforcement last year.&lt;/p&gt;
+&lt;p&gt;The judgment call is on the account: act immediately and visibly, or restrict quietly while investigations maps linked accounts and law enforcement decides what it needs. Immature programs default to the ban because it's the only lever their tooling gives them, and it looks like success on a dashboard. In practice, the offender returns on a fresh account with none of the history that flagged them, linked accounts go unexamined, and the child is still reachable wherever the conversation already moved.&lt;/p&gt;
+&lt;p&gt;The industry is building the other half. Through the Tech Coalition's Lantern program, participating companies had shared more than 2 million signals by the end of 2025, supporting over 350,000 enforcement actions across platforms. If offenders work across services, a single platform's ban is one move in a longer sequence, and the response has to be coordinated to match.&lt;/p&gt;
+&lt;p&gt;A banned account is not a closed case. In enticement work, speed isn't the standard. A safe child and a fully mapped network are.&lt;/p&gt;
+&lt;p&gt;#ChildSafety #TrustAndSafety #ResponsibleAI&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/appeal-overturns-the-early-warning-for-automation/</id>
+    <title>Appeal overturns: the early warning for automation</title>
+    <link href="https://stevenmacchia.com/writing/appeal-overturns-the-early-warning-for-automation/"/>
+    <published>2026-09-24T14:48:33.759Z</published>
+    <updated>2026-09-24T14:48:33.759Z</updated>
+    <summary>Overturned appeals show drift weeks before anything else. Automation expands only where its overturn rate matches human review, and changes roll back when the rate moves.</summary>
+    <content type="html">&lt;p&gt;As more enforcement moves to automation, one of the most important questions a Trust &amp;amp; Safety leader can answer is how quickly they'd know if the system started getting things wrong.&lt;/p&gt;
+&lt;p&gt;Most programs already have one of the best early-warning signals for this and don't treat it that way: the decisions users contest and win.&lt;/p&gt;
+&lt;p&gt;Broken out by policy area, enforcement source, market etc., appeal overturn data shows where guidance is unclear, where automated decisions hold up worse than human review, where language and context are getting lost, and where a model has drifted. It often shows drift weeks before anything else does.&lt;/p&gt;
+&lt;p&gt;That makes it something you can govern with. A few rules I'd put in place:&lt;/p&gt;
+&lt;p&gt;- Automation doesn't expand into a new policy area until its overturn rate is at or below human review.&lt;/p&gt;
+&lt;p&gt;- Every model or threshold change gets an overturn baseline before launch and a check (x) weeks after. If the rate moves past an agreed limit, the change rolls back.&lt;/p&gt;
+&lt;p&gt;- When a policy area stays above its overturn target, the first thing reviewed is the guidance itself, before anyone looks at reviewer performance.&lt;/p&gt;
+&lt;p&gt;This signal has limits. It only measures over-enforcement, since nobody contests the harm you missed, so it needs to sit next to prevalence sampling. And appeal rates vary by market, so a low overturn rate where few people appeal isn't automatically good news.&lt;/p&gt;
+&lt;p&gt;Automation in T&amp;amp;S isn't slowing down. The programs that handle it well will be the ones that decide in advance what earns automation more scope - and what takes that scope away.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/activity-is-easy-to-measure-impact-is-harder/</id>
+    <title>Activity is easy to measure. Impact is harder.</title>
+    <link href="https://stevenmacchia.com/writing/activity-is-easy-to-measure-impact-is-harder/"/>
+    <published>2026-09-23T16:38:43.784Z</published>
+    <updated>2026-09-23T16:38:43.784Z</updated>
+    <summary>A 40% jump in removals could mean better detection, more harm or over-enforcement. Report outcome metrics next to operational ones, and tell leadership when they disagree.</summary>
+    <content type="html">&lt;p&gt;If your team took down 40% more harmful content last quarter than the quarter before, is that good news?&lt;/p&gt;
+&lt;p&gt;Most Trust &amp;amp; Safety teams would present it that way. The honest answer is that you don't know yet.&lt;/p&gt;
+&lt;p&gt;It could mean detection improved. It could mean harm on the platform grew. It could mean automation got more aggressive, and legitimate users are paying for it.&lt;/p&gt;
+&lt;p&gt;Volume alone can't tell you which.&lt;/p&gt;
+&lt;p&gt;This is one of the most common gaps in how T&amp;amp;S programs report to leadership. We measure how much work the system does, like removals, reports actioned, automation rate, and time to decision. Those numbers are easy to produce, and they almost always go up and to the right.&lt;/p&gt;
+&lt;p&gt;But what gets measured gets resourced. When a program is rewarded for activity, it optimizes for activity.&lt;/p&gt;
+&lt;p&gt;The metrics that matter are harder to build:&lt;/p&gt;
+&lt;p&gt;- Is exposure to severe harm going down?&lt;/p&gt;
+&lt;p&gt;- After enforcement, do bad actors stop, or just come back on new accounts?&lt;/p&gt;
+&lt;p&gt;- Are we catching high-risk behavior earlier?&lt;/p&gt;
+&lt;p&gt;- What are appeals telling us about where our policy or automation is wrong?&lt;/p&gt;
+&lt;p&gt;Operational metrics show the machine is running. Outcome metrics show it's working. A mature program reports both, and is willing to tell leadership when they disagree. That's the real leadership test. It takes discipline to walk into a business review and say, &amp;quot;Our numbers are up, and I'm not convinced we're safer.&amp;quot;&lt;/p&gt;
+&lt;p&gt;But that's the conversation that earns credibility, directs investment to the right places, and keeps Trust &amp;amp; Safety from being judged like a cost center measured by throughput.&lt;/p&gt;
+&lt;p&gt;Activity is easy to measure. Impact is harder.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/automation-rate-isn-t-a-measure-of-maturity/</id>
+    <title>Automation rate isn't a measure of maturity</title>
+    <link href="https://stevenmacchia.com/writing/automation-rate-isn-t-a-measure-of-maturity/"/>
+    <published>2026-09-21T13:22:14.043Z</published>
+    <updated>2026-09-21T13:22:14.043Z</updated>
+    <summary>Automate as much as the evidence supports. Where a wrong decision can't be reversed or someone's safety is at risk, automation prepares the case and a person closes it.</summary>
+    <content type="html">&lt;p&gt;Automation rate is a useful efficiency metric, but it isn't a measure of maturity. It counts the decisions humans didn't have to make, not whether those decisions were correct.&lt;/p&gt;
+&lt;p&gt;The goal I work toward is automating as much decision-making as the evidence supports, and reserving human judgment for cases where context, severity, or the cost of error requires it.&lt;/p&gt;
+&lt;p&gt;A classifier alone can not yet make that determination. The system also has to weigh confidence, severity, user history, behavioral signals, prior enforcement, reputation, age-related risk, and the consequences of a wrong decision.&lt;/p&gt;
+&lt;p&gt;Those inputs determine the response: automated enforcement where the evidence is clear; friction, deprioritization, or distribution limits where it is less certain; additional signals where a decision isn't yet supportable; and human review where the cost of an error is too high.&lt;/p&gt;
+&lt;p&gt;Consider what a single high-confidence score can describe: a credible threat, hyperbole between acquaintances, or a survivor recounting their own experience. The score is the same. The appropriate action is not. That is why decisions in child safety, credible threats, exploitation, and self-harm can't yet rest on model confidence alone.&lt;/p&gt;
+&lt;p&gt;The programs I've seen work best didn't measure success by how much review they eliminated. They looked at decision accuracy, cost per decision, and appeal overturn rate, along with whether reviewer time was concentrated where judgment mattered most.&lt;/p&gt;
+&lt;p&gt;Where the line between automated and human decisions sits also determines how much harmful material reviewers are exposed to. Designing it well includes limiting that exposure through rotation and support.&lt;/p&gt;
+&lt;p&gt;AI lets Trust &amp;amp; Safety teams operate at a scale manual review never could. Deciding where automated action ends and human judgment begins is the harder design problem.&lt;/p&gt;
+&lt;p&gt;My default: where a wrong decision can't be reversed, or a user's safety is at risk, a human owns the call. In those cases, automation prepares the case and a person closes it.&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #ContentModeration #ResponsibleAi&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>https://stevenmacchia.com/writing/you-can-t-moderate-your-way-out-of-a-systems-problem/</id>
+    <title>You can't moderate your way out of a systems problem</title>
+    <link href="https://stevenmacchia.com/writing/you-can-t-moderate-your-way-out-of-a-systems-problem/"/>
+    <published>2026-09-18T19:06:56.160Z</published>
+    <updated>2026-09-18T19:06:56.160Z</updated>
+    <summary>Treating Trust &amp; Safety mainly as an operations function is a mistake. Reputation, history, age and behavior signals belong in one risk model, automation needs clear limits, and safety belongs in the product architecture from the start.</summary>
+    <content type="html">&lt;p&gt;One of the biggest mistakes companies make with Trust &amp;amp; Safety is treating it primarily as an operations function.&lt;/p&gt;
+&lt;p&gt;Hire moderators. Write policies. Build escalation queues. Respond when something goes wrong.&lt;/p&gt;
+&lt;p&gt;Those things are necessary.&lt;/p&gt;
+&lt;p&gt;But at scale, you cannot moderate your way out of a systems problem.&lt;/p&gt;
+&lt;p&gt;Trust &amp;amp; Safety has to become part of the product architecture. That means moving beyond individual moderation decisions and designing systems that understand risk across the entire user journey.&lt;/p&gt;
+&lt;p&gt;Reputation, account history, age, behavioral signals, content signals, prior enforcement, and appeals should not exist as disconnected workflows. They should inform a broader risk model that helps determine how the platform responds.&lt;/p&gt;
+&lt;p&gt;The same is true for automation. The challenge is not simply building a classifier or automating more moderation decisions. It is knowing where automation should act, where it should escalate, and where human judgment is worth the cost.&lt;/p&gt;
+&lt;p&gt;Over the last several years, I’ve worked across moderation operations, policy, child safety, investigations, compliance, and product.&lt;/p&gt;
+&lt;p&gt;The biggest lesson I’ve taken from that work is that mature Trust &amp;amp; Safety programs are not built around a moderation queue.&lt;/p&gt;
+&lt;p&gt;They are built around systems.&lt;/p&gt;
+&lt;p&gt;Reputation systems that change how risk is evaluated. AI-assisted moderation that surfaces content and behavior humans would otherwise never see. OCR, audio transcription, behavioral signals, and content classification working together instead of operating as isolated tools.&lt;/p&gt;
+&lt;p&gt;Policy translated into product requirements, enforcement logic, and measurable outcomes. And human review reserved for the places where context and judgment actually matter.&lt;/p&gt;
+&lt;p&gt;Trust &amp;amp; Safety will always require strong operations.&lt;/p&gt;
+&lt;p&gt;But the future of the field is not simply better moderation.&lt;/p&gt;
+&lt;p&gt;It is designing products where safety is part of the architecture from the beginning.&lt;/p&gt;
+&lt;p&gt;That intersection between Trust &amp;amp; Safety, AI, policy, and product is where I’ve spent much of my career, and it’s something I plan to write about more here.&lt;/p&gt;</content>
+  </entry>
+</feed>
