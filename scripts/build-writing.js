@@ -16,6 +16,8 @@
 // Run: node scripts/build-writing.js (from this repo), or node stevenmacchia.github.io/scripts/build-writing.js
 // from the portfolio root (how the daily-post skill's sync-posts.js calls it).
 const fs = require("fs"), path = require("path");
+const { execFileSync } = require("child_process");
+const crypto = require("crypto");
 const SITE = path.resolve(__dirname, "..");
 const ROOT = path.resolve(SITE, "..");
 const P = (...p) => path.join(ROOT, ...p);
@@ -27,6 +29,12 @@ const HB = `${HOME}/ts-handbook/`;
 const NAME = "Steven Macchia";
 const EMAIL = "stevenamacchia@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/stevenmacchia";
+const SEARCH_INDEX_URL = `${HOME}/ts-handbook/search.json`; // cross-site index, built by the handbook
+
+/* ---------- Share cards: writing/<slug>/card.png, 1200x630, from scripts/og-post.html ---------- */
+const CHROME = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const OG_TEMPLATE = path.join(__dirname, "og-post.html");
+function titleHash(title) { return crypto.createHash("sha1").update(title).digest("hex").slice(0, 12); }
 
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const fmtDate = s => new Date(s + "T12:00:00Z").toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric", timeZone: "UTC"});

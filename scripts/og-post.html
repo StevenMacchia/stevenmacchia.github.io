@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>og</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+body{font-family:Inter,sans-serif;color:#15172B;background:
+  radial-gradient(760px 420px at 78% -12%, rgba(109,93,246,.32), transparent 62%),
+  radial-gradient(560px 360px at 14% -4%, rgba(255,160,120,.30), transparent 60%),#F7F8FC;position:relative}
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;align-items:center;gap:12px;font-size:22px;font-weight:600}
+.top i{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#6D5DF6,#FF9A7A);flex:none}
+.top span{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:19px;font-weight:500;color:#636A85}
+h1{position:absolute;left:72px;right:72px;top:188px;margin:0;line-height:1.16;letter-spacing:-.03em;font-weight:800;
+  background:linear-gradient(100deg,#15172B 45%,#6D5DF6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.foot{position:absolute;left:72px;right:72px;bottom:60px;padding-top:26px;border-top:1px solid rgba(21,23,43,.12);display:flex;align-items:center;gap:18px}
+.foot time{font-family:"IBM Plex Mono",monospace;color:#636A85;font-size:19px}
+.foot span{margin-left:auto;color:#636A85;font-size:19px}
+</style></head><body>
+<div class="top"><i></i>Steven Macchia<span>stevenmacchia.com</span></div>
+<h1 id="t"></h1>
+<div class="foot"><time id="d"></time><span>stevenmacchia.com/writing</span></div>
+<script>
+var p = new URLSearchParams(location.search);
+var title = p.get('title') || '';
+var h1 = document.getElementById('t');
+h1.textContent = title;
+document.getElementById('d').textContent = p.get('date') || '';
+var len = title.length;
+var size = len > 95 ? 44 : len > 72 ? 52 : len > 48 ? 60 : 72;
+h1.style.fontSize = size + 'px';
+</script>
+</body></html>
