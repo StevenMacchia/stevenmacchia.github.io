@@ -70,6 +70,7 @@ function assignSlug(store, key, text) {
 }
 posts.forEach(p => assignSlug(slugsStore.posts, p.id, p.slug || p.title));
 topicDefs.forEach(t => assignSlug(slugsStore.topics, t.topic, t.topic));
+if (!slugsStore.cardHash) slugsStore.cardHash = {};
 fs.mkdirSync(path.join(SITE, "writing"), {recursive: true});
 fs.writeFileSync(SLUGS_PATH, JSON.stringify(slugsStore, null, 2) + "\n");
 const postSlug = p => slugsStore.posts[p.id];
@@ -80,7 +81,13 @@ const topicHref = t => `${WRITING}${topicSlug(t)}/`;
 /* ---------- Reuse the site's own head, header and footer markup, read from the writing page as it stands today ---------- */
 const existing = fs.readFileSync(path.join(SITE, "writing", "index.html"), "utf8");
 const grab = (re, fallback = "") => (existing.match(re) || [fallback])[0];
-const SHARED_STYLE = (existing.match(/<style>\n([\s\S]*?)\n<\/style>/) || [, ""])[1];
+// The style block below is this script's own prior output, so it already carries one copy of EXTRA_CSS
+// (and the page-h rule appended after it). Cut everything from the first such marker onward each run,
+// rather than keep it, so re-running the build doesn't grow the page with another copy every time.
+const STYLE_MARKER = ".hb .starthere-note{margin:2px 0 0";
+const rawStyle = (existing.match(/<style>\n([\s\S]*?)\n<\/style>/) || [, ""])[1];
+const markerAt = rawStyle.indexOf(STYLE_MARKER);
+const SHARED_STYLE = (markerAt === -1 ? rawStyle : rawStyle.slice(0, markerAt)).replace(/\s+$/, "");
 const NAV = grab(/<nav class="top">[\s\S]*?<\/nav>/);
 const FONT_LINKS = grab(/<link rel="preconnect"[\s\S]*?display=swap">/);
 const ANALYTICS = grab(/<script defer src="https:\/\/static\.cloudflareinsights\.com[\s\S]*?<\/script>/);
@@ -109,11 +116,29 @@ const EXTRA_CSS = `
 .chapter-card b{display:block;font-size:15px;line-height:1.3;margin-bottom:4px}
 .chapter-card span{display:block;color:var(--muted);font-size:13.5px;line-height:1.4}
 .sec-h.tight{padding-top:0;border-top:none;margin-bottom:16px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wr-search{position:relative;max-width:520px;margin:28px 0 0}
+.wr-search input[type=search]{width:100%;padding:13px 40px 13px 16px;border-radius:10px;border:1px solid var(--line);background:#fff;font:inherit;font-size:15px;color:var(--ink);box-shadow:0 1px 2px rgba(21,23,43,.05);appearance:none}
+.wr-search input[type=search]::-webkit-search-cancel-button{appearance:none}
+.wr-search input[type=search]:focus{outline:2px solid var(--blue);outline-offset:2px}
+.wr-search-hint{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:1px 6px;pointer-events:none}
+.wr-search-results{position:absolute;left:0;right:0;top:calc(100% + 8px);z-index:20;max-height:420px;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:8px}
+.wr-search-group + .wr-search-group{margin-top:6px;padding-top:6px;border-top:1px solid var(--line)}
+.wr-search-kind{margin:6px 10px 4px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.wr-search-item{display:block;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--ink)}
+.wr-search-item b{display:block;font-size:14.5px;font-weight:600;letter-spacing:-.01em}
+.wr-search-item span{display:block;margin-top:2px;font-size:13px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wr-search-item:hover,.wr-search-item.active{background:rgba(109,93,246,.12)}
+.wr-search-empty,.wr-search-note{margin:6px 10px;font-size:13px;color:var(--muted)}
+.follow-line{margin:16px 0 0;font-size:14.5px;color:var(--muted)}
+.follow-line a{color:var(--blue);font-weight:500;text-decoration:none}
+.follow-line a:hover{text-decoration:underline}
 @media (max-width:900px){.hb .starthere-list li{grid-template-columns:1fr;gap:2px}.hb .starthere-list time{padding-top:0}.post-body{font-size:17px}}
 `;
 
 /* ---------- Page shell ---------- */
-function shell({title, description, canonical, bodyClass, jsonLd, body}) {
+function shell({title, description, canonical, bodyClass, jsonLd, body, ogImage, extraScript}) {
+  const img = ogImage || `${HOME}/og-image.png`;
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -124,8 +149,8 @@ function shell({title, description, canonical, bodyClass, jsonLd, body}) {
 <meta name="author" content="${NAME}">
 <link rel="canonical" href="${canonical}">
 <meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}">
-<meta property="og:url" content="${canonical}"><meta property="og:image" content="${HOME}/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${HOME}/og-image.png">
+<meta property="og:url" content="${canonical}"><meta property="og:image" content="${img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${img}">
 <meta name="theme-color" content="#6D5DF6">
 ${ICON}
 ${ANALYTICS}
@@ -145,10 +170,13 @@ ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script
 ${body}
 </main>
 ${FOOTER}
-</body>
+${extraScript || ""}</body>
 </html>
 `;
 }
+
+/* ---------- "Get new posts" line: Atom feed + LinkedIn, no email form (none is configured) ---------- */
+const followLine = () => `<p class="follow-line">Get new posts: <a href="${WRITING}feed.xml">RSS</a> · <a href="${LINKEDIN}">LinkedIn</a></p>`;
 
 /* ---------- Post body: full text as paragraphs, bare URLs linked ---------- */
 function linkify(escapedText) {
@@ -196,6 +224,13 @@ const indexBody = `  <div class="page-h">
     <h1 style="margin-top:18px">What changed in Trust &amp; Safety, and why it matters</h1>
     <p class="sub" style="max-width:62ch">Posts on child safety, age assurance, automation and platform compliance, from someone who does the work, kept here as a readable archive. They're also where the principles behind <a href="${HB}">The T&amp;S Handbook</a> come from.</p>
     <div class="cta"><a class="btn primary" href="${LINKEDIN}">Follow on LinkedIn</a><a class="btn" href="${HB}">Read the handbook</a></div>
+    <div class="wr-search" role="search">
+      <label for="wr-search-input" class="sr-only">Search writing, the handbook and the workbench</label>
+      <input id="wr-search-input" type="search" placeholder="Search writing, the handbook, the workbench…" autocomplete="off">
+      <span class="wr-search-hint" aria-hidden="true">/</span>
+      <div id="wr-search-results" class="wr-search-results" role="listbox" hidden></div>
+    </div>
+    ${followLine()}
   </div>
   <section id="start"><div class="wrap">
     <div class="hb">
@@ -218,8 +253,78 @@ ${ps.map(p => postRow(p)).join("\n")}
     <div class="more"><a href="${topicHref(topic)}">All posts in ${esc(topic)} →</a></div>
   </div></section>`;
   }).filter(Boolean).join("\n")}`;
+
+/* ---------- The search box's own script: fetches the cross-site index lazily on focus, falls back to
+   the posts already on this page (title + point) if that fetch fails, so it never looks broken. ---------- */
+const searchFallback = posts.map(p => ({title: p.title, summary: p.point, url: postHref(p), kind: "post"}));
+const searchScript = `<script>
+(function(){
+  var SEARCH_URL = ${JSON.stringify(SEARCH_INDEX_URL)};
+  var FALLBACK = ${JSON.stringify(searchFallback).replace(/<\//g, "<\\/")};
+  var input = document.getElementById("wr-search-input");
+  var panel = document.getElementById("wr-search-results");
+  if (!input || !panel) return;
+  var cache = null, fetchPromise = null, items = [], activeIdx = -1;
+  var KIND_LABEL = {chapter: "Handbook", post: "Writing", tool: "Workbench", update: "Update"};
+  function kindLabel(k){ return KIND_LABEL[k] || (k ? k.charAt(0).toUpperCase() + k.slice(1) : ""); }
+  function norm(s){ return (s || "").toLowerCase(); }
+  function esc(s){ return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  function scoreOf(q, it, titleKey, bodyKeys){
+    var title = norm(it[titleKey]), score = 0;
+    if (title.indexOf(q) === 0) score += 100; else if (title.indexOf(q) !== -1) score += 60;
+    bodyKeys.forEach(function(k, i){ var v = it[k]; var text = norm(Array.isArray(v) ? v.join(" ") : v); if (text && text.indexOf(q) !== -1) score += (bodyKeys.length - i) * 10; });
+    return score;
+  }
+  function scoreRemote(q, it){ return scoreOf(q, it, "title", ["tags", "summary", "text"]); }
+  function scoreLocal(q, it){ return scoreOf(q, it, "title", ["summary"]); }
+  function load(){
+    if (!fetchPromise) fetchPromise = fetch(SEARCH_URL).then(function(r){ if (!r.ok) throw new Error(String(r.status)); return r.json(); }).then(function(d){ cache = (d && d.items) || []; return cache; });
+    return fetchPromise;
+  }
+  function render(list, mode){
+    items = list; activeIdx = -1;
+    if (!list.length) { panel.innerHTML = '<p class="wr-search-empty">No results' + (mode === "local" ? " on this page." : ".") + "</p>"; panel.hidden = false; return; }
+    var groups = {}, order = [];
+    list.forEach(function(it){ var k = it.kind || "post"; if (!groups[k]) { groups[k] = []; order.push(k); } groups[k].push(it); });
+    var html = order.map(function(k){
+      return '<div class="wr-search-group"><p class="wr-search-kind">' + esc(kindLabel(k)) + "</p>" +
+        groups[k].map(function(it){
+          var idx = list.indexOf(it);
+          return '<a class="wr-search-item" data-idx="' + idx + '" href="' + it.url + '"><b>' + esc(it.title) + "</b>" + (it.summary ? "<span>" + esc(it.summary) + "</span>" : "") + "</a>";
+        }).join("") + "</div>";
+    }).join("");
+    if (mode === "local") html += '<p class="wr-search-note">Searching this page only — the full index didn\\'t load.</p>';
+    panel.innerHTML = html; panel.hidden = false;
+  }
+  function rank(q, list, scorer){ return list.map(function(it){ return {it: it, s: scorer(q, it)}; }).filter(function(x){ return x.s > 0; }).sort(function(a, b){ return b.s - a.s; }).slice(0, 12).map(function(x){ return x.it; }); }
+  function runLocal(q){ render(rank(q, FALLBACK, scoreLocal), "local"); }
+  function doSearch(){
+    var q = norm(input.value).trim();
+    if (!q) { panel.hidden = true; panel.innerHTML = ""; return; }
+    if (cache) { render(rank(q, cache, scoreRemote), "remote"); return; }
+    load().then(function(data){ render(rank(q, data, scoreRemote), "remote"); }).catch(function(){ runLocal(q); });
+  }
+  input.addEventListener("focus", function(){ load().catch(function(){}); });
+  input.addEventListener("input", doSearch);
+  input.addEventListener("keydown", function(e){
+    var links = panel.querySelectorAll(".wr-search-item");
+    if (e.key === "ArrowDown") { if (links.length) { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, links.length - 1); mark(links); } }
+    else if (e.key === "ArrowUp") { if (links.length) { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); mark(links); } }
+    else if (e.key === "Enter") { if (activeIdx >= 0 && links[activeIdx]) { window.location.href = links[activeIdx].href; } }
+    else if (e.key === "Escape") { panel.hidden = true; input.blur(); }
+  });
+  function mark(links){ for (var i = 0; i < links.length; i++) links[i].classList.toggle("active", i === activeIdx); links[activeIdx].scrollIntoView({block: "nearest"}); }
+  document.addEventListener("click", function(e){ if (!panel.contains(e.target) && e.target !== input) panel.hidden = true; });
+  document.addEventListener("keydown", function(e){
+    var tag = (document.activeElement || {}).tagName || "";
+    if (e.key === "/" && document.activeElement !== input && tag !== "INPUT" && tag !== "TEXTAREA") { e.preventDefault(); input.focus(); }
+  });
+})();
+</script>
+`;
+
 fs.writeFileSync(path.join(SITE, "writing", "index.html"), shell({
-  title: `Writing · ${NAME}`, description: wdesc, canonical: WRITING, bodyClass: "wr", body: indexBody,
+  title: `Writing · ${NAME}`, description: wdesc, canonical: WRITING, bodyClass: "wr", body: indexBody, extraScript: searchScript,
   jsonLd: {"@context": "https://schema.org", "@type": "CollectionPage", name: `Writing · ${NAME}`, url: WRITING, description: wdesc}
 }));
 
@@ -249,6 +354,32 @@ ${ps.map(p => postRow(p)).join("\n")}
   topicPages++;
 }
 
+/* ---------- Share card: writing/<slug>/card.png, 1200x630, rendered from scripts/og-post.html with
+   headless Chrome. Only re-rendered when missing or the post's title changed (hash kept in slugs.json),
+   so a build that touches nothing doesn't re-launch Chrome 24 times. ---------- */
+let cardsRendered = 0, cardsSkippedNoChrome = false;
+function renderCard(p, dir) {
+  const hash = titleHash(p.title);
+  const cardPath = path.join(dir, "card.png");
+  if (fs.existsSync(cardPath) && slugsStore.cardHash[p.id] === hash) return false;
+  const fileUrl = "file:///" + OG_TEMPLATE.replace(/\\/g, "/");
+  const url = `${fileUrl}?title=${encodeURIComponent(p.title)}&date=${encodeURIComponent(fmtDate(p.date))}`;
+  try {
+    execFileSync(CHROME, [
+      "--headless=new", "--hide-scrollbars", "--disable-gpu",
+      "--window-size=1200,630", "--virtual-time-budget=4000",
+      `--screenshot=${cardPath}`, url
+    ], {stdio: "ignore"});
+    slugsStore.cardHash[p.id] = hash;
+    cardsRendered++;
+    return true;
+  } catch (e) {
+    cardsSkippedNoChrome = true;
+    console.warn(`Could not render ${cardPath} (${e.message.split("\n")[0]}); og:image falls back to the site default.`);
+    return false;
+  }
+}
+
 /* ---------- writing/<post-slug>/index.html ---------- */
 for (const p of posts) {
   const dir = path.join(SITE, "writing", postSlug(p));
@@ -257,10 +388,14 @@ for (const p of posts) {
   const rel = related(p);
   const hasTopic = topicDefs.some(t => t.topic === p.topic);
   const canonical = postHref(p);
+  renderCard(p, dir);
+  const hasCard = fs.existsSync(path.join(dir, "card.png"));
+  const ogImage = hasCard ? `${canonical}card.png` : undefined;
   const body = `  <div class="page-h">
     <p class="lbl" style="margin:0"><a href="${WRITING}">Writing</a>${hasTopic ? ` · <a href="${topicHref(p.topic)}">${esc(p.topic)}</a>` : ""}</p>
     <h1 style="margin-top:18px">${esc(p.title)}</h1>
     <p class="post-meta"><time>${fmtDate(p.date)}</time><span>${readingMin(p.body)} min read</span><span>${esc(p.type)}</span><a href="${p.url}">Discuss on LinkedIn →</a></p>
+    ${followLine()}
   </div>
   <section><div class="wrap">
     <div class="post-body">
@@ -280,15 +415,16 @@ ${rel.map(o => postRow(o)).join("\n")}
     </ol>
   </div></section>` : ""}`;
   fs.writeFileSync(path.join(dir, "index.html"), shell({
-    title: `${p.title} · ${NAME}`, description: p.point, canonical, bodyClass: "wr", body,
+    title: `${p.title} · ${NAME}`, description: p.point, canonical, bodyClass: "wr", body, ogImage,
     jsonLd: {
       "@context": "https://schema.org", "@type": "Article", headline: p.title, description: p.point,
       datePublished: p.date, dateModified: p.engagement_checked || p.date,
       author: {"@type": "Person", name: NAME, url: `${HOME}/`}, publisher: {"@type": "Person", name: NAME},
-      mainEntityOfPage: canonical, image: `${HOME}/og-image.png`
+      mainEntityOfPage: canonical, image: ogImage || `${HOME}/og-image.png`
     }
   }));
 }
+fs.writeFileSync(SLUGS_PATH, JSON.stringify(slugsStore, null, 2) + "\n"); // cardHash updated above
 
 /* ---------- writing/feed.xml: Atom, 30 newest, full text ---------- */
 const feedPosts = newest.slice(0, 30);
@@ -314,6 +450,9 @@ ${feedPosts.map(p => `  <entry>
 `;
 fs.writeFileSync(path.join(SITE, "writing", "feed.xml"), feedXml);
 
+const cardFiles = posts.map(p => path.join(SITE, "writing", postSlug(p), "card.png")).filter(f => fs.existsSync(f));
+const cardsBytes = cardFiles.reduce((n, f) => n + fs.statSync(f).size, 0);
 console.log(`Writing archive: ${posts.length} post pages, ${topicPages} topic pages, 1 index, feed.xml (${feedPosts.length} entries).`);
 console.log(`Slug rule: from each post's title (no posts had an existing "slug" field); stable map in writing/slugs.json.`);
 console.log(`Start here rule: ${startHereRule}.`);
+console.log(`Share cards: ${cardFiles.length}/${posts.length} card.png present (${(cardsBytes / 1024 / 1024).toFixed(2)} MB total), ${cardsRendered} (re)rendered this run${cardsSkippedNoChrome ? " — some renders failed, see warnings above" : ""}.`);
