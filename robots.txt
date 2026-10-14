@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Sitemap: https://stevenmacchia.com/sitemap.xml
 Sitemap: https://stevenmacchia.com/ts-workbench/sitemap.xml
+Sitemap: https://stevenmacchia.com/ts-handbook/sitemap.xml
