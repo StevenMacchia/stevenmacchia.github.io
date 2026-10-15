@@ -145,10 +145,12 @@ footer .fine{color:#A0A6C0}
 .page-h{padding:72px 0 56px}
 .page-h h1{font-size:clamp(40px,5.5vw,64px);max-width:18ch}
 .wr .sec-h h2{font-size:28px;line-height:1.12}
+.top .btn .short{display:none}
 @media (max-width:900px){.hw{grid-template-columns:1fr;gap:24px}.posts li{grid-template-columns:1fr;gap:4px}.posts time{padding-top:0}.page-h{padding:40px 0 32px}}
-@media (max-width:900px){.hero{grid-template-columns:1fr;gap:20px;padding:36px 0 28px}.photo{max-width:200px}.proof{grid-template-columns:1fr 1fr;gap:16px;padding-bottom:40px}.sec-h,.show,.row2,footer .wrap{grid-template-columns:1fr;gap:16px}.show{padding:18px}.show-tabs{order:1}.exp li{grid-template-columns:1fr;gap:4px}.exp time{padding-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top .btn{margin-left:auto}section{padding-bottom:56px}}
-@media (max-width:560px){.focus{grid-template-columns:1fr}.cta .btn{width:100%}.cta .go{margin:0;width:100%;text-align:center}.proof{grid-template-columns:1fr}}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:20px;padding:36px 0 28px}.photo{max-width:200px}.proof{grid-template-columns:1fr 1fr;gap:16px;padding-bottom:40px}.sec-h,.show,.row2,footer .wrap{grid-template-columns:1fr;gap:16px}.show{padding:18px}.show-tabs{order:1}.exp li{grid-template-columns:1fr;gap:4px}.exp time{padding-top:0}.wrap{padding:0 20px}.top{gap:14px}.top a:not(.btn):not(.keep):not(.mark){display:none}.top .btn{margin-left:auto}section{padding-bottom:56px}}
+@media (max-width:560px){.focus{grid-template-columns:1fr}.cta .btn{width:100%}.cta .go{margin:0;width:100%;text-align:center}.proof{grid-template-columns:1fr}.top b{display:none}.top .btn .full{display:none}.top .btn .short{display:inline}.page-h h1{font-size:34px}}
 @media (max-width:900px){.top a.name{display:inline}}
+@media (max-width:560px){.top a.name{display:none}}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
 
 .hb .starthere-note{margin:2px 0 0;font-size:13px;color:var(--muted)}
@@ -188,6 +190,9 @@ footer .fine{color:#A0A6C0}
 .follow-line{margin:16px 0 0;font-size:14.5px;color:var(--muted)}
 .follow-line a{color:var(--blue);font-weight:500;text-decoration:none}
 .follow-line a:hover{text-decoration:underline}
+.topic-chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.topic-chips a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font-size:14px;font-weight:500;text-decoration:none;box-shadow:0 1px 2px rgba(21,23,43,.05)}
+.topic-chips a:hover{border-color:var(--blue);color:var(--blue)}
 @media (max-width:900px){.hb .starthere-list li{grid-template-columns:1fr;gap:2px}.hb .starthere-list time{padding-top:0}.post-body{font-size:17px}}
 
 .page-h{max-width:1152px;margin:0 auto;padding:44px 32px 20px}
@@ -197,7 +202,7 @@ footer .fine{color:#A0A6C0}
 </head>
 <body>
 <header><div class="wrap">
-  <nav class="top"><span class="mark" aria-hidden="true"></span><a class="name" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#projects">Projects</a><a href="https://stevenmacchia.com/ts-handbook/">Handbook</a><a href="https://stevenmacchia.com/writing/" aria-current="page">Writing</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Download resume</a></nav>
+  <nav class="top"><a class="mark" href="https://stevenmacchia.com/" aria-label="Steven Macchia, home"></a><a class="name keep" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#projects">Projects</a><a class="keep" href="https://stevenmacchia.com/ts-handbook/">Handbook</a><a class="keep" href="https://stevenmacchia.com/writing/" aria-current="page">Writing</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download><span class="full">Download resume</span><span class="short">Resume</span></a></nav>
 </div></header>
 <main class="wr">
   <div class="page-h">
@@ -212,6 +217,7 @@ footer .fine{color:#A0A6C0}
       <div id="wr-search-results" class="wr-search-results" role="listbox" hidden></div>
     </div>
     <p class="follow-line">Get new posts: <a href="https://stevenmacchia.com/writing/feed.xml">RSS</a> · <a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a></p>
+    <nav aria-label="Topics"><ul class="topic-chips"><li><a href="#start">Start here</a></li><li><a href="#t-child-safety-and-age-assurance">Child safety and age assurance</a></li><li><a href="#t-automation-and-decision-quality">Automation and decision quality</a></li><li><a href="#t-measuring-what-matters">Measuring what matters</a></li><li><a href="#t-safety-by-design-and-operations">Safety by design and operations</a></li><li><a href="#t-what-s-changing">What's changing</a></li></ul></nav>
   </div>
   <section id="start"><div class="wrap">
     <div class="hb">
@@ -230,7 +236,7 @@ footer .fine{color:#A0A6C0}
       </ol>
     </div>
   </div></section>
-  <section><div class="wrap">
+  <section id="t-child-safety-and-age-assurance"><div class="wrap">
     <div class="sec-h"><h2>Child safety and age assurance</h2><p class="big">Age assurance, grooming and enticement, and what actually protects kids on products adults use too.</p></div>
     <ol class="posts">
       <li><time>Oct 13, 2026</time><div><h3><a href="https://stevenmacchia.com/writing/parents-top-gaming-concern-is-the-rule-they-set-least/">Parents' top gaming concern is the rule they set least</a></h3><p>Ofcom's Growing Up Gaming research: 55% of children who game online play with people they've never met offline at least sometimes, and strangers are parents' top concern, yet only 43% set rules about who their child plays with. Platforms should close that gap with defaults (contact limited to people a child knows, friction on adults reaching unknown children, one clear parental switch) and measure how often strangers reach kids.</p><p class="meta">1 min read · Commentary · <a href="https://stevenmacchia.com/writing/child-safety-and-age-assurance/">Child safety and age assurance</a></p></div></li>
@@ -244,7 +250,7 @@ footer .fine{color:#A0A6C0}
     </ol>
     <div class="more"><a href="https://stevenmacchia.com/writing/child-safety-and-age-assurance/">All posts in Child safety and age assurance →</a></div>
   </div></section>
-  <section><div class="wrap">
+  <section id="t-automation-and-decision-quality"><div class="wrap">
     <div class="sec-h"><h2>Automation and decision quality</h2><p class="big">Where automated decisions should end, where people take over, and how to tell when automation is getting it wrong.</p></div>
     <ol class="posts">
       <li><time>Sep 24, 2026</time><div><h3><a href="https://stevenmacchia.com/writing/appeal-overturns-the-early-warning-for-automation/">Appeal overturns: the early warning for automation</a></h3><p>Overturned appeals show drift weeks before anything else. Automation expands only where its overturn rate matches human review, and changes roll back when the rate moves.</p><p class="meta">1 min read · Essay · <a href="https://stevenmacchia.com/writing/automation-and-decision-quality/">Automation and decision quality</a></p></div></li>
@@ -252,7 +258,7 @@ footer .fine{color:#A0A6C0}
     </ol>
     <div class="more"><a href="https://stevenmacchia.com/writing/automation-and-decision-quality/">All posts in Automation and decision quality →</a></div>
   </div></section>
-  <section><div class="wrap">
+  <section id="t-measuring-what-matters"><div class="wrap">
     <div class="sec-h"><h2>Measuring what matters</h2><p class="big">Outcomes over activity, and making the business case for safety with your own data.</p></div>
     <ol class="posts">
       <li><time>Oct 1, 2026</time><div><h3><a href="https://stevenmacchia.com/writing/harassed-players-look-like-your-best-retained-users/">Harassed players look like your best-retained users</a></h3><p>Raw retention data hides the cost of toxicity because harassed players are the most engaged. A matched cohort shows it, and safety exposure belongs on the retention dashboard.</p><p class="meta">1 min read · Essay · <a href="https://stevenmacchia.com/writing/measuring-what-matters/">Measuring what matters</a></p></div></li>
@@ -260,7 +266,7 @@ footer .fine{color:#A0A6C0}
     </ol>
     <div class="more"><a href="https://stevenmacchia.com/writing/measuring-what-matters/">All posts in Measuring what matters →</a></div>
   </div></section>
-  <section><div class="wrap">
+  <section id="t-safety-by-design-and-operations"><div class="wrap">
     <div class="sec-h"><h2>Safety by design and operations</h2><p class="big">Getting safety into a product before launch, and running it well after.</p></div>
     <ol class="posts">
       <li><time>Oct 8, 2026</time><div><h3><a href="https://stevenmacchia.com/writing/what-i-d-tell-myself-in-year-one-of-trust-and-safety/">What I'd tell myself in year one of Trust &amp; Safety</a></h3><p>Five lessons from more than ten years in the field: treat safety as a systems problem built into the product, don't treat a ban as a closed case, measure what users experience rather than how busy the team was, let automation earn its scope, and give every risk one named owner.</p><p class="meta">1 min read · Essay · <a href="https://stevenmacchia.com/writing/safety-by-design-and-operations/">Safety by design and operations</a></p></div></li>
@@ -273,7 +279,7 @@ footer .fine{color:#A0A6C0}
     </ol>
     <div class="more"><a href="https://stevenmacchia.com/writing/safety-by-design-and-operations/">All posts in Safety by design and operations →</a></div>
   </div></section>
-  <section><div class="wrap">
+  <section id="t-what-s-changing"><div class="wrap">
     <div class="sec-h"><h2>What's changing</h2><p class="big">Regulation, litigation and the news that will land on your roadmap.</p></div>
     <ol class="posts">
       <li><time>Oct 7, 2026</time><div><h3><a href="https://stevenmacchia.com/writing/what-i-m-reading-an-open-policy-model-xbox-s-adult-checks-discord-in-brazil-and-kosa/">What I'm reading: an open policy model, Xbox's adult checks, Discord in Brazil and KOSA</a></h3><p>An open-weights model that scores a message against your written policy in milliseconds (Musubi's PolicyLM-1.7B, which the Workbench's classifier eval can now run), Xbox marking some long-time accounts as adults from their account activity, a Brazilian interim order for Discord to add age verification and parental supervision, and KOSA now needing a recorded Senate vote.</p><p class="meta">1 min read · Reading roundup · <a href="https://stevenmacchia.com/writing/what-s-changing/">What's changing</a></p></div></li>

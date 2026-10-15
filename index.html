@@ -35,7 +35,7 @@ h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;line-height:1.05}
 .btn.primary{background:var(--ink);color:#fff}
 .btn.primary:hover{background:#2a2a2a}
 .top .btn{padding:8px 14px;font-size:14px}
-.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:end;padding:56px 0 36px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:start;padding:56px 0 36px}
 .lbl{font-size:13px;color:var(--muted);font-weight:500}
 h1{font-size:clamp(40px,5.5vw,68px);margin-top:14px}
 .lead{margin:16px 0 0;font-size:clamp(17px,1.8vw,19px);line-height:1.45;max-width:48ch}
@@ -58,7 +58,8 @@ h2{font-size:36px}
 .sec-h p{margin:0}
 .sec-h .big{font-size:19px;font-weight:500}
 .sec-h .intro{margin-top:10px;color:var(--muted);max-width:72ch}
-.depth{margin-top:10px;font-size:13.5px;color:var(--muted)}
+.depth{display:flex;flex-wrap:wrap;gap:6px 8px;list-style:none;margin:12px 0 0;padding:0;font-size:12.5px;color:var(--muted)}
+.depth li{border:1px solid var(--line);border-radius:999px;padding:2px 10px;background:rgba(255,255,255,.6);white-space:nowrap}
 .show{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;background:var(--panel);border-radius:4px;padding:32px}
 .show-tabs{display:flex;flex-direction:column}
 .show-tabs button{display:flex;align-items:baseline;gap:12px;width:100%;padding:9px 0;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);font:inherit;font-size:14.5px;text-align:left;cursor:pointer}
@@ -67,6 +68,13 @@ h2{font-size:36px}
 .show-tabs button[aria-selected="true"]{font-weight:600}
 .show-tabs button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 .show-tabs i{width:8px;height:8px;border-radius:50%;flex:none;align-self:center;margin:0 3px}
+.show-list{display:none;list-style:none;margin:0;padding:0}
+.show-list li{border-bottom:1px solid var(--line)}
+.show-list li:last-child{border-bottom:0}
+.show-list a{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 12px;padding:11px 0;text-decoration:none;color:var(--ink)}
+.show-list i{width:8px;height:8px;border-radius:50%;margin:7px 3px 0}
+.show-list b{font-weight:600;font-size:15px}
+.show-list span{grid-column:2;color:var(--muted);font-size:13.5px;line-height:1.4}
 .show-frame{display:block;border-radius:4px;overflow:hidden;border:1px solid var(--line);background:#fff;aspect-ratio:16/10}
 .show-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left}
 .show-cap{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-top:14px}
@@ -74,7 +82,7 @@ h2{font-size:36px}
 .links{display:flex;gap:18px;font-size:14.5px;font-weight:500;white-space:nowrap}
 .links a{text-decoration:none}
 .links a:hover{text-decoration:underline}
-.wb-cta{display:flex;gap:28px;margin-top:28px;font-size:15px;font-weight:500}
+.wb-cta{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:28px;font-size:15px;font-weight:500}
 .wb-cta a{text-decoration:none}
 .wb-cta a:hover{text-decoration:underline}
 .exp{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
@@ -131,8 +139,12 @@ h1{background:linear-gradient(100deg, var(--ink) 35%, var(--blue) 100%);-webkit-
 .btn:hover{background:#fff;border-color:var(--strong);box-shadow:var(--shadow)}
 .btn.primary,.btn.primary:hover{background:linear-gradient(135deg,#6D5DF6,#9B6BFF);border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(109,93,246,.35)}
 .btn.primary:hover{background:linear-gradient(135deg,#7A6BFF,#A77DFF)}
-.open{border-top-color:var(--line)}
+.open{margin-top:34px;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--panel);box-shadow:var(--shadow);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .open .sq,.focus li::before{border-radius:50%;background:var(--blue)}
+.posts p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.top .btn .short{display:none}
+.hb ol a{color:var(--ink);text-decoration:none}
+.hb ol a:hover{text-decoration:underline;color:var(--blue)}
 .photo,.show-frame{border-radius:14px}
 .show-frame{border-color:var(--line);box-shadow:var(--shadow)}
 .show,.hb{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
@@ -147,15 +159,16 @@ footer .fine{color:#A0A6C0}
 .page-h h1{font-size:clamp(40px,5.5vw,64px);max-width:18ch}
 .wr .sec-h h2{font-size:28px;line-height:1.12}
 @media (max-width:900px){.hw{grid-template-columns:1fr;gap:24px}.posts li{grid-template-columns:1fr;gap:4px}.posts time{padding-top:0}.page-h{padding:40px 0 32px}}
-@media (max-width:900px){.hero{grid-template-columns:1fr;gap:20px;padding:36px 0 28px}.photo{max-width:200px}.proof{grid-template-columns:1fr 1fr;gap:16px;padding-bottom:40px}.sec-h,.show,.row2,footer .wrap{grid-template-columns:1fr;gap:16px}.show{padding:18px}.show-tabs{order:1}.exp li{grid-template-columns:1fr;gap:4px}.exp time{padding-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top .btn{margin-left:auto}section{padding-bottom:56px}}
-@media (max-width:560px){.focus{grid-template-columns:1fr}.cta .btn{width:100%}.cta .go{margin:0;width:100%;text-align:center}.proof{grid-template-columns:1fr}}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:20px;padding:36px 0 28px}.photo{max-width:200px}.proof{grid-template-columns:1fr 1fr;gap:16px;padding-bottom:40px}.sec-h,.show,.row2,footer .wrap{grid-template-columns:1fr;gap:16px}.show{padding:18px}.show-tabs{order:1}.exp li{grid-template-columns:1fr;gap:4px}.exp time{padding-top:0}.wrap{padding:0 20px}.top{gap:14px}.top a:not(.btn):not(.keep):not(.mark){display:none}.top .btn{margin-left:auto}.open{margin-top:0}.show-tabs,.show-view{display:none}.show-list{display:block}.show-cap{flex-direction:column;gap:8px}section{padding-bottom:56px}}
+@media (max-width:560px){.focus{grid-template-columns:1fr}.cta .btn{width:100%}.cta .go{margin:0;width:100%;text-align:center}.proof{grid-template-columns:1fr}.top b{display:none}.top .btn .full{display:none}.top .btn .short{display:inline}}
 @media (max-width:900px){.top a.name{display:inline}}
+@media (max-width:560px){.top a.name{display:none}}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-  <nav class="top"><span class="mark" aria-hidden="true"></span><b>Steven Macchia</b><a href="#projects">Projects</a><a href="https://stevenmacchia.com/ts-handbook/">Handbook</a><a href="writing/">Writing</a><a href="#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://github.com/stevenmacchia">GitHub</a><a class="btn" href="Steven_Macchia_Resume.pdf" download>Download resume</a></nav>
+  <nav class="top"><a class="mark" href="https://stevenmacchia.com/" aria-label="Steven Macchia, home"></a><b>Steven Macchia</b><a href="#projects">Projects</a><a class="keep" href="https://stevenmacchia.com/ts-handbook/">Handbook</a><a class="keep" href="writing/">Writing</a><a href="#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://github.com/stevenmacchia">GitHub</a><a class="btn" href="Steven_Macchia_Resume.pdf" download><span class="full">Download resume</span><span class="short">Resume</span></a></nav>
   <div class="hero">
     <div>
       <p class="lbl" style="margin:0">Trust & Safety leader</p>
@@ -170,7 +183,7 @@ footer .fine{color:#A0A6C0}
     </div>
   </div>
   <div class="proof">
-    <div><b>Billions of items a month</b><span>videos, images and text on a gaming platform. I led the move to AI-assisted moderation and scanning, with human review kept for nuanced and high-risk cases</span></div>
+    <div><b>Billions of items a month</b><span>I lead moderation of videos, images and text on a gaming platform, and led the move to AI-assisted scanning with human review kept for nuanced and high-risk cases</span></div>
     <div><b>NCMEC partnership</b><span>I set up the company's NCMEC partnership and the escalation workflows for child safety and severe abuse; CSAM escalations, preservation requests and law enforcement inquiries run through it</span></div>
     <div><b>$1M+ a year projected saving</b><span>I led the zero-to-one build of a platform-wide user reputation system, improving moderation efficiency and enforcement accuracy</span></div>
     <div><b>GDPR, CCPA and the DSA</b><span>I direct global privacy and regulatory compliance: DPIAs, ROPA, DSARs, data retention and vendor oversight, plus CSAM reporting to NCMEC</span></div>
@@ -178,10 +191,10 @@ footer .fine{color:#A0A6C0}
 </div></header>
 <main>
   <section id="projects"><div class="wrap">
-    <div class="sec-h"><h2>T&amp;S Workbench</h2><div><p class="big">A free, open set of Trust &amp; Safety tools I built</p><p class="intro">Tools for finding risks before launch, rehearsing incidents, measuring what matters, choosing vendors and writing clearer policy. The knowledge behind them is published as open content. Private by default: work is saved only in your browser, and AI runs only when you ask.</p><p class="depth mono">58 abuse risks · 104 safeguards · 33 legal obligations · 43 crisis scenarios · 36 metrics · 48 DSA duties</p></div></div>
+    <div class="sec-h"><h2>T&amp;S Workbench</h2><div><p class="big">A free, open set of Trust &amp; Safety tools I built</p><p class="intro">Tools for finding risks before launch, rehearsing incidents, measuring what matters, choosing vendors and writing clearer policy. The knowledge behind them is published as open content. Private by default: work is saved only in your browser, and AI runs only when you ask.</p><ul class="depth mono" aria-label="What the tools hold"><li>58 abuse risks</li><li>104 safeguards</li><li>33 legal obligations</li><li>43 crisis scenarios</li><li>36 metrics</li><li>48 DSA duties</li></ul></div></div>
     <div class="show">
       <div>
-        <p class="lbl" style="margin:0 0 8px">One assessment, fourteen tools</p>
+        <p class="lbl" style="margin:0 0 8px">Pick a tool</p>
         <div class="show-tabs" role="tablist" aria-label="Workbench tools" aria-orientation="vertical">
           <button type="button" role="tab" id="st-overview" aria-controls="sp-overview" aria-selected="true" tabindex="0"><i aria-hidden="true" style="background:#8B8CFF"></i>Your assessment</button>
           <button type="button" role="tab" id="st-premortem" aria-controls="sp-premortem" aria-selected="false" tabindex="-1"><i aria-hidden="true" style="background:#7B7FF5"></i>Abuse pre-mortem</button>
@@ -196,6 +209,20 @@ footer .fine{color:#A0A6C0}
           <button type="button" role="tab" id="st-redteam" aria-controls="sp-redteam" aria-selected="false" tabindex="-1"><i aria-hidden="true" style="background:#E0532F"></i>Red team studio · WIP</button>
           <button type="button" role="tab" id="st-learn" aria-controls="sp-learn" aria-selected="false" tabindex="-1"><i aria-hidden="true" style="background:#8B8CFF"></i>Learn · WIP</button>
         </div>
+        <ul class="show-list" aria-label="Workbench tools">
+          <li><a href="https://stevenmacchia.com/ts-workbench/#demo"><i aria-hidden="true" style="background:#8B8CFF"></i><b>Your assessment</b><span>One picture of your program: a score, grades, what to do first.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#premortem"><i aria-hidden="true" style="background:#7B7FF5"></i><b>Abuse pre-mortem</b><span>How a product could be misused before launch.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#tabletop"><i aria-hidden="true" style="background:#3B8EF0"></i><b>Incident tabletop</b><span>Rehearse a crisis: 43 scenarios with the law behind each.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#metrics"><i aria-hidden="true" style="background:#2BB39A"></i><b>Metrics framework</b><span>36 metrics with formulas and SQL.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#vendors"><i aria-hidden="true" style="background:#C065DB"></i><b>Vendor scorecard</b><span>Choose a moderation vendor on evidence.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#coverage"><i aria-hidden="true" style="background:#3DBE77"></i><b>Coverage radar</b><span>Your radar fills in as you answer.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#maturity"><i aria-hidden="true" style="background:#E4579E"></i><b>Program maturity</b><span>Rate 8 areas, get a phased roadmap.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#eval"><i aria-hidden="true" style="background:#121212"></i><b>Classifier eval</b><span>Precision, recall and where a classifier fails.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#dsa"><i aria-hidden="true" style="background:#8DB4F2"></i><b>Compliance readiness</b><span>Which DSA and COPPA duties apply, gaps ranked.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#policy"><i aria-hidden="true" style="background:#27B3CF"></i><b>AI assistants</b><span>Stress-test a policy, draft notices, review appeals.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#redteam"><i aria-hidden="true" style="background:#E0532F"></i><b>Red team studio · WIP</b><span>Test your own AI feature for harm, one step at a time.</span></a></li>
+          <li><a href="https://stevenmacchia.com/ts-workbench/#learn"><i aria-hidden="true" style="background:#8B8CFF"></i><b>Learn · WIP</b><span>Two red-teaming guides and two glossaries.</span></a></li>
+        </ul>
       </div>
       <div class="show-view">
         <div class="show-panel" role="tabpanel" id="sp-overview" aria-labelledby="st-overview"><a class="show-frame" href="https://stevenmacchia.com/ts-workbench/#demo" tabindex="-1" aria-hidden="true"><img src="img/overview.jpg" alt="Your assessment in T&amp;S Workbench" width="1600" height="1000" loading="lazy"></a><div class="show-cap"><p>A guided assessment that fills in one picture of a Trust &amp; Safety program: a score, each part graded, three radars and what to do first. Shown with the demo company.</p><span class="links"><a href="https://stevenmacchia.com/ts-workbench/#demo">Try it</a><a href="https://github.com/stevenmacchia/ts-workbench">How it works</a></span></div></div>
@@ -212,12 +239,12 @@ footer .fine{color:#A0A6C0}
         <div class="show-panel" role="tabpanel" id="sp-learn" aria-labelledby="st-learn" hidden><a class="show-frame" href="https://stevenmacchia.com/ts-workbench/#learn" tabindex="-1" aria-hidden="true"><img data-src="img/learn.jpg" alt="Learn · WIP in T&amp;S Workbench" width="1400" height="1068" loading="lazy"></a><div class="show-cap"><p><strong>Work in progress.</strong> Two guides to red teaming AI models, a red-teaming glossary and a plain-English Trust &amp; Safety glossary, each with practice and progress saved in your browser. Method in cards, a check question per step, and 103 plain-word T&amp;S terms checked against primary sources.</p><span class="links"><a href="https://stevenmacchia.com/ts-workbench/#learn">Try it</a><a href="https://github.com/stevenmacchia/ts-workbench">How it works</a></span></div></div>
       </div>
     </div>
-    <div class="wb-cta"><a href="https://stevenmacchia.com/ts-workbench/">Try it live →</a><a href="https://stevenmacchia.com/ts-workbench/#demo">Explore the demo company</a><a href="https://github.com/stevenmacchia/ts-workbench">Source code</a></div>
+    <div class="wb-cta"><a href="https://stevenmacchia.com/ts-workbench/">Open the Workbench →</a><a href="https://github.com/stevenmacchia/ts-workbench">Source code</a></div>
   </div></section>
   <section id="writing"><div class="wrap">
     <div class="sec-h"><h2>Handbook and writing</h2><div><p class="big">How I think about building and running Trust &amp; Safety</p><p class="intro">I write about child safety, age assurance, automation and platform compliance, and I'm turning it into a free, open handbook on building and running a safety team.</p></div></div>
     <div class="hw">
-      <div class="hb"><p class="lbl" style="margin:0">The T&amp;S Handbook · 19 chapters</p><h3>From the first hire to a regulated program at scale</h3><p>19 chapters in 4 parts, each paired with a free Workbench tool and built on ten principles from my writing.</p><ol><li><i>1</i>Before the first hire</li><li><i>2</i>Build</li><li><i>3</i>Run</li><li><i>4</i>Scale and govern</li></ol><p>Updated Oct 13, 2026 · <a href="https://stevenmacchia.com/ts-handbook/updates/">What changed</a></p><a class="go" href="https://stevenmacchia.com/ts-handbook/">Read the handbook →</a></div>
+      <div class="hb"><p class="lbl" style="margin:0">The T&amp;S Handbook · 19 chapters</p><h3>From the first hire to a regulated program at scale</h3><p>19 chapters in 4 parts, each paired with a free Workbench tool and built on ten principles from my writing.</p><ol><li><i>1</i><a href="https://stevenmacchia.com/ts-handbook/01-what-trust-and-safety-is-for/">Before the first hire</a></li><li><i>2</i><a href="https://stevenmacchia.com/ts-handbook/04-writing-policy/">Build</a></li><li><i>3</i><a href="https://stevenmacchia.com/ts-handbook/10-quality-calibration-and-appeals/">Run</a></li><li><i>4</i><a href="https://stevenmacchia.com/ts-handbook/16-regulation-and-compliance/">Scale and govern</a></li></ol><p>Updated Oct 13, 2026 · <a href="https://stevenmacchia.com/ts-handbook/updates/">What changed</a></p><a class="go" href="https://stevenmacchia.com/ts-handbook/">Read the handbook →</a></div>
       <div><p class="lbl" style="margin:0 0 8px">Recent writing</p><ol class="posts">
         <li><time>Oct 13, 2026</time><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-gamingsafety-share-7515766955706826752-8pJN/">Parents' top gaming concern is the rule they set least</a></h3><p>Ofcom's Growing Up Gaming research: 55% of children who game online play with people they've never met offline at least sometimes, and strangers are parents' top concern, yet only 43% set rules about who their child plays with. Platforms should close that gap with defaults (contact limited to people a child knows, friction on adults reaching unknown children, one clear parental switch) and measure how often strangers reach kids.</p></div></li>
         <li><time>Oct 8, 2026</time><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-contentmoderation-share-7513978054688395266-P3DE/">What I'd tell myself in year one of Trust &amp; Safety</a></h3><p>Five lessons from more than ten years in the field: treat safety as a systems problem built into the product, don't treat a ban as a closed case, measure what users experience rather than how busy the team was, let automation earn its scope, and give every risk one named owner.</p></div></li>
@@ -227,7 +254,7 @@ footer .fine{color:#A0A6C0}
     </div>
   </div></section>
   <section id="experience"><div class="wrap">
-    <div class="sec-h"><h2>Experience</h2><p class="big">Trust &amp; Safety and online communities since 2016</p></div>
+    <div class="sec-h"><h2>Experience</h2><p class="big">From moderation team lead to head of Trust &amp; Safety</p></div>
     <ol class="exp">
       <li><time>Sep 2024 – now</time><div><h3>Head of Global Compliance and Trust &amp; Safety</h3><span class="org">Medal</span></div><p>Lead compliance and Trust &amp; Safety for a gaming UGC platform moderating billions of videos, images and text submissions a month: AI-assisted moderation, privacy (GDPR, CCPA, DSA), youth safety, and CSAM escalations with NCMEC and law enforcement. Manage the vendor budget across multiple AI moderation and transcription vendors.</p></li>
       <li><time>Jan – Sep 2024</time><div><h3>Safety Manager</h3><span class="org">Medal</span></div><p>Led the zero-to-one build of a platform-wide user reputation system, projected to save $1M+ a year while improving moderation efficiency and enforcement accuracy. Led the migration to AI-assisted moderation and scanning for visual and text content.</p></li>

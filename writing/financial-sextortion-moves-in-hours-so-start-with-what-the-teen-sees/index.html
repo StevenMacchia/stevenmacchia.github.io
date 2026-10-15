@@ -145,10 +145,12 @@ footer .fine{color:#A0A6C0}
 .page-h{padding:72px 0 56px}
 .page-h h1{font-size:clamp(40px,5.5vw,64px);max-width:18ch}
 .wr .sec-h h2{font-size:28px;line-height:1.12}
+.top .btn .short{display:none}
 @media (max-width:900px){.hw{grid-template-columns:1fr;gap:24px}.posts li{grid-template-columns:1fr;gap:4px}.posts time{padding-top:0}.page-h{padding:40px 0 32px}}
-@media (max-width:900px){.hero{grid-template-columns:1fr;gap:20px;padding:36px 0 28px}.photo{max-width:200px}.proof{grid-template-columns:1fr 1fr;gap:16px;padding-bottom:40px}.sec-h,.show,.row2,footer .wrap{grid-template-columns:1fr;gap:16px}.show{padding:18px}.show-tabs{order:1}.exp li{grid-template-columns:1fr;gap:4px}.exp time{padding-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top .btn{margin-left:auto}section{padding-bottom:56px}}
-@media (max-width:560px){.focus{grid-template-columns:1fr}.cta .btn{width:100%}.cta .go{margin:0;width:100%;text-align:center}.proof{grid-template-columns:1fr}}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:20px;padding:36px 0 28px}.photo{max-width:200px}.proof{grid-template-columns:1fr 1fr;gap:16px;padding-bottom:40px}.sec-h,.show,.row2,footer .wrap{grid-template-columns:1fr;gap:16px}.show{padding:18px}.show-tabs{order:1}.exp li{grid-template-columns:1fr;gap:4px}.exp time{padding-top:0}.wrap{padding:0 20px}.top{gap:14px}.top a:not(.btn):not(.keep):not(.mark){display:none}.top .btn{margin-left:auto}section{padding-bottom:56px}}
+@media (max-width:560px){.focus{grid-template-columns:1fr}.cta .btn{width:100%}.cta .go{margin:0;width:100%;text-align:center}.proof{grid-template-columns:1fr}.top b{display:none}.top .btn .full{display:none}.top .btn .short{display:inline}.page-h h1{font-size:34px}}
 @media (max-width:900px){.top a.name{display:inline}}
+@media (max-width:560px){.top a.name{display:none}}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
 
 .hb .starthere-note{margin:2px 0 0;font-size:13px;color:var(--muted)}
@@ -188,6 +190,9 @@ footer .fine{color:#A0A6C0}
 .follow-line{margin:16px 0 0;font-size:14.5px;color:var(--muted)}
 .follow-line a{color:var(--blue);font-weight:500;text-decoration:none}
 .follow-line a:hover{text-decoration:underline}
+.topic-chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.topic-chips a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font-size:14px;font-weight:500;text-decoration:none;box-shadow:0 1px 2px rgba(21,23,43,.05)}
+.topic-chips a:hover{border-color:var(--blue);color:var(--blue)}
 @media (max-width:900px){.hb .starthere-list li{grid-template-columns:1fr;gap:2px}.hb .starthere-list time{padding-top:0}.post-body{font-size:17px}}
 
 .page-h{max-width:1152px;margin:0 auto;padding:44px 32px 20px}
@@ -197,7 +202,7 @@ footer .fine{color:#A0A6C0}
 </head>
 <body>
 <header><div class="wrap">
-  <nav class="top"><span class="mark" aria-hidden="true"></span><a class="name" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#projects">Projects</a><a href="https://stevenmacchia.com/ts-handbook/">Handbook</a><a href="https://stevenmacchia.com/writing/" aria-current="page">Writing</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Download resume</a></nav>
+  <nav class="top"><a class="mark" href="https://stevenmacchia.com/" aria-label="Steven Macchia, home"></a><a class="name keep" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#projects">Projects</a><a class="keep" href="https://stevenmacchia.com/ts-handbook/">Handbook</a><a class="keep" href="https://stevenmacchia.com/writing/" aria-current="page">Writing</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download><span class="full">Download resume</span><span class="short">Resume</span></a></nav>
 </div></header>
 <main class="wr">
   <div class="page-h">

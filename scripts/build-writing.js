@@ -133,6 +133,9 @@ const EXTRA_CSS = `
 .follow-line{margin:16px 0 0;font-size:14.5px;color:var(--muted)}
 .follow-line a{color:var(--blue);font-weight:500;text-decoration:none}
 .follow-line a:hover{text-decoration:underline}
+.topic-chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.topic-chips a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font-size:14px;font-weight:500;text-decoration:none;box-shadow:0 1px 2px rgba(21,23,43,.05)}
+.topic-chips a:hover{border-color:var(--blue);color:var(--blue)}
 @media (max-width:900px){.hb .starthere-list li{grid-template-columns:1fr;gap:2px}.hb .starthere-list time{padding-top:0}.post-body{font-size:17px}}
 `;
 
@@ -231,6 +234,7 @@ const indexBody = `  <div class="page-h">
       <div id="wr-search-results" class="wr-search-results" role="listbox" hidden></div>
     </div>
     ${followLine()}
+    <nav aria-label="Topics"><ul class="topic-chips"><li><a href="#start">Start here</a></li>${topicDefs.filter(({topic}) => newest.some(p => p.topic === topic)).map(({topic}) => `<li><a href="#t-${topicSlug(topic)}">${esc(topic)}</a></li>`).join("")}</ul></nav>
   </div>
   <section id="start"><div class="wrap">
     <div class="hb">
@@ -245,7 +249,7 @@ ${startHere.map(p => `        <li><time>${fmtDate(p.date)}</time><div><h3><a hre
 ${topicDefs.map(({topic, about}) => {
     const ps = newest.filter(p => p.topic === topic);
     if (!ps.length) return "";
-    return `  <section><div class="wrap">
+    return `  <section id="t-${topicSlug(topic)}"><div class="wrap">
     <div class="sec-h"><h2>${esc(topic)}</h2><p class="big">${esc(about)}</p></div>
     <ol class="posts">
 ${ps.map(p => postRow(p)).join("\n")}
