@@ -5,8 +5,24 @@
   <subtitle>What changed in Trust &amp; Safety and why it matters: Steven Macchia on child safety, age assurance, automation and platform compliance. An archive to read, not just a list of links.</subtitle>
   <link href="https://stevenmacchia.com/writing/feed.xml" rel="self"/>
   <link href="https://stevenmacchia.com/writing/"/>
-  <updated>2026-10-15T15:16:48.294Z</updated>
+  <updated>2026-10-16T15:10:31.286Z</updated>
   <author><name>Steven Macchia</name><email>stevenamacchia@gmail.com</email></author>
+  <entry>
+    <id>https://stevenmacchia.com/writing/every-public-safety-claim-is-something-someone-can-test/</id>
+    <title>Every public safety claim is something someone can test</title>
+    <link href="https://stevenmacchia.com/writing/every-public-safety-claim-is-something-someone-can-test/"/>
+    <published>2026-10-16T15:10:31.286Z</published>
+    <updated>2026-10-16T15:10:31.286Z</updated>
+    <summary>State attorneys general are testing whether what platforms told parents about safety matches what happened, as in Florida's new consumer protection suit against Discord. Give one person the list of public safety claims, attach the evidence behind each, be exact about age checks, and recheck the list whenever the product changes.</summary>
+    <content type="html">&lt;p&gt;A lot of the US pressure on games and chat platforms over child safety is coming from state attorneys general right now, mostly through consumer protection law. The question in those cases is whether what a company told parents about safety matches what actually happened on the platform.&lt;/p&gt;
+&lt;p&gt;Last Thursday, Florida's attorney general sued Discord under the state's Deceptive and Unfair Trade Practices Act. The complaint says Discord marketed itself as safe for minors, lists eight incidents since 2022 where it says an adult exploited a minor through the platform, and asks the court to bar Discord from marketing itself as safe without real age verification.&lt;/p&gt;
+&lt;p&gt;New Jersey brought a similar suit last year, and several states have sued Roblox since 2025. These are allegations, and none of the cases has been decided.&lt;/p&gt;
+&lt;p&gt;Every public safety claim, from the help center to a sales deck a partner saw two years ago, is something someone can test. So sit down with Legal, give one person ownership, and get Marketing in the room. List every claim, attach the evidence behind it (the control, the metric, when it was last tested), and fix or soften anything that has none.&lt;/p&gt;
+&lt;p&gt;Be exact about age checks, since a self-declared birthday and a verified age are different claims. And recheck the list whenever the product changes. A default flipped off can make a true sentence false without anyone touching the page.&lt;/p&gt;
+&lt;p&gt;Someone must own the list of public safety claims and actually check it against your product.&lt;/p&gt;
+&lt;p&gt;Floridas suit, as reported by WFSU: &lt;a href=&quot;https://lnkd.in/eRuriyCn&quot;&gt;https://lnkd.in/eRuriyCn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #ChildSafety #Compliance&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>https://stevenmacchia.com/writing/a-good-trust-and-safety-program-is-invisible/</id>
     <title>A good Trust &amp; Safety program is invisible</title>
