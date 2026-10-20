@@ -12,6 +12,8 @@
 <meta property="og:url" content="https://stevenmacchia.com/"><meta property="og:image" content="https://stevenmacchia.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/og-image.png">
 <meta name="theme-color" content="#6D5DF6">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=(localStorage.getItem("tswb:theme")||"").replace(/"/g,"");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}})()</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%236D5DF6%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +37,7 @@ h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;line-height:1.05}
 .btn.primary{background:var(--ink);color:#fff}
 .btn.primary:hover{background:#2a2a2a}
 .top .btn{padding:8px 14px;font-size:14px}
-.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:start;padding:56px 0 36px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:start;padding:44px 0 28px}
 .lbl{font-size:13px;color:var(--muted);font-weight:500}
 h1{font-size:clamp(40px,5.5vw,68px);margin-top:14px}
 .lead{margin:16px 0 0;font-size:clamp(17px,1.8vw,19px);line-height:1.45;max-width:48ch}
@@ -48,7 +50,7 @@ h1{font-size:clamp(40px,5.5vw,68px);margin-top:14px}
 .open .sq{display:inline-block;width:8px;height:8px;background:var(--good);margin-right:9px}
 .open span{color:var(--muted)}
 .photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;margin-bottom:18px;background:var(--panel)}
-.proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding:20px 0 48px;border-top:1px solid var(--line)}
+.proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding:18px 0 40px;border-top:1px solid var(--line)}
 .proof div{display:grid;gap:4px;align-content:start;font-size:14.5px;line-height:1.45}
 .proof b{font-weight:600}
 .proof span{color:var(--muted)}
@@ -159,6 +161,34 @@ footer .fine{color:#A0A6C0}
 .page-h{padding:72px 0 56px}
 .page-h h1{font-size:clamp(40px,5.5vw,64px);max-width:18ch}
 .wr .sec-h h2{font-size:28px;line-height:1.12}
+.skip{position:absolute;left:16px;top:-60px;z-index:50;padding:10px 14px;border-radius:10px;background:var(--blue);color:#fff;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+.doors{margin:18px 0 0;font-size:14.5px;color:var(--muted);max-width:60ch}
+.doors a{color:var(--ink);font-weight:500;text-decoration-color:var(--strong);text-underline-offset:3px}
+.doors a:hover{text-decoration-color:var(--blue)}
+.open a{color:var(--ink);font-weight:500;text-decoration-color:var(--strong);text-underline-offset:3px;word-break:break-all}
+.proof a{color:var(--ink);text-decoration:none}
+.proof a:hover{text-decoration:underline;text-decoration-color:var(--blue);text-underline-offset:3px}
+.exp li{scroll-margin-top:24px}
+/* Dark: follows a theme chosen in the workbench (tswb:theme, same origin), else the system preference */
+:root[data-theme="dark"]{--bg:#10121F;--panel:rgba(23,26,43,.72);--ink:#EEF0FA;--muted:#A0A6C0;--line:rgba(238,240,250,.12);--strong:rgba(238,240,250,.28);--blue:#9B8CFF;--good:#3DCB8C;--navy:#0B0C18;--wash:radial-gradient(900px 420px at 72% -10%, rgba(109,93,246,.30), transparent 62%), radial-gradient(700px 380px at 22% 0%, rgba(255,160,120,.12), transparent 60%);--shadow:0 1px 1px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35)}
+:root[data-theme="dark"] .btn,:root[data-theme="dark"] .top .btn{background:#171A2B;color:var(--ink);box-shadow:none}
+:root[data-theme="dark"] .btn:hover{background:#1C2033}
+:root[data-theme="dark"] .btn.primary{background:linear-gradient(135deg,#6D5DF6,#9B6BFF);border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(109,93,246,.35)}
+:root[data-theme="dark"] .btn.primary:hover{background:linear-gradient(135deg,#7A6BFF,#A77DFF)}
+:root[data-theme="dark"] .show-frame{background:#171A2B}
+:root[data-theme="dark"] .depth li{background:rgba(255,255,255,.04)}
+:root[data-theme="dark"] .wr-search input[type=search]{background:#171A2B}
+:root[data-theme="dark"] .skip{color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#10121F;--panel:rgba(23,26,43,.72);--ink:#EEF0FA;--muted:#A0A6C0;--line:rgba(238,240,250,.12);--strong:rgba(238,240,250,.28);--blue:#9B8CFF;--good:#3DCB8C;--navy:#0B0C18;--wash:radial-gradient(900px 420px at 72% -10%, rgba(109,93,246,.30), transparent 62%), radial-gradient(700px 380px at 22% 0%, rgba(255,160,120,.12), transparent 60%);--shadow:0 1px 1px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35)}
+:root:not([data-theme="light"]) .btn,:root:not([data-theme="light"]) .top .btn{background:#171A2B;color:var(--ink);box-shadow:none}
+:root:not([data-theme="light"]) .btn:hover{background:#1C2033}
+:root:not([data-theme="light"]) .btn.primary{background:linear-gradient(135deg,#6D5DF6,#9B6BFF);border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(109,93,246,.35)}
+:root:not([data-theme="light"]) .btn.primary:hover{background:linear-gradient(135deg,#7A6BFF,#A77DFF)}
+:root:not([data-theme="light"]) .show-frame{background:#171A2B}
+:root:not([data-theme="light"]) .depth li{background:rgba(255,255,255,.04)}
+:root:not([data-theme="light"]) .wr-search input[type=search]{background:#171A2B}
+:root:not([data-theme="light"]) .skip{color:#fff}}
 @media (max-width:900px){.hw{grid-template-columns:1fr;gap:24px}.posts li{grid-template-columns:1fr;gap:4px}.posts time{padding-top:0}.page-h{padding:40px 0 32px}}
 @media (max-width:900px){.hero{grid-template-columns:1fr;gap:20px;padding:36px 0 28px}.photo{max-width:200px}.proof{grid-template-columns:1fr 1fr;gap:16px;padding-bottom:40px}.sec-h,.show,.row2,footer .wrap{grid-template-columns:1fr;gap:16px}.show{padding:18px}.show-tabs{order:1}.exp li{grid-template-columns:1fr;gap:4px}.exp time{padding-top:0}.wrap{padding:0 20px}.top{gap:14px}.top a:not(.btn):not(.keep):not(.mark){display:none}.top .btn{margin-left:auto}.open{margin-top:0}.show-tabs,.show-view{display:none}.show-list{display:block}.show-cap{flex-direction:column;gap:8px}section{padding-bottom:56px}}
 @media (max-width:560px){.focus{grid-template-columns:1fr}.cta .btn{width:100%}.cta .go{margin:0;width:100%;text-align:center}.proof{grid-template-columns:1fr}.top b{display:none}.top .btn .full{display:none}.top .btn .short{display:inline}}
@@ -168,6 +198,7 @@ footer .fine{color:#A0A6C0}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header><div class="wrap">
   <nav class="top"><a class="mark" href="https://stevenmacchia.com/" aria-label="Steven Macchia, home"></a><b>Steven Macchia</b><a href="#experience">Experience</a><a href="#projects">Workbench</a><a class="keep" href="https://stevenmacchia.com/ts-handbook/">Handbook</a><a class="keep" href="writing/">Writing</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://github.com/stevenmacchia">GitHub</a><a class="btn" href="Steven_Macchia_Resume.pdf" download><span class="full">Download resume</span><span class="short">Resume</span></a></nav>
   <div class="hero">
@@ -176,29 +207,30 @@ footer .fine{color:#A0A6C0}
       <h1>Steven Macchia</h1>
       <p class="lead">I run Trust &amp; Safety and compliance for a gaming platform moderating billions of videos, images and text posts a month. I built the function from zero and grew it to cover policy, moderation operations, child safety, privacy and AI-assisted enforcement.</p>
       <p class="sub">I write about the work, and I build free tools so teams without a specialist can do it too.</p>
-      <div class="cta"><a class="btn primary" href="Steven_Macchia_Resume.pdf" download>Download resume</a><a class="btn" href="mailto:stevenamacchia@gmail.com">Get in touch</a><a class="go" href="https://stevenmacchia.com/ts-workbench/">Open T&amp;S Workbench →</a></div>
+      <div class="cta"><a class="btn primary" href="Steven_Macchia_Resume.pdf" download>Download resume</a><a class="btn" href="mailto:stevenamacchia@gmail.com">Get in touch</a><a class="btn" href="https://stevenmacchia.com/ts-workbench/">Open T&amp;S Workbench</a></div>
+      <p class="doors">Hiring? Start with <a href="#experience">Experience</a> and the <a href="Steven_Macchia_Resume.pdf" download>resume</a>. Running a safety team? Start with <a href="https://stevenmacchia.com/ts-handbook/">the handbook</a>.</p>
     </div>
     <div>
       
-      <div class="open"><div><i class="sq" aria-hidden="true"></i><b>Open to roles</b></div><span>Director, Head of and Senior Trust &amp; Safety roles</span><span>Remote, or hybrid in Raleigh–Durham</span></div>
+      <div class="open"><div><i class="sq" aria-hidden="true"></i><b>Open to roles</b></div><span>Director, Head of and Senior Trust &amp; Safety roles</span><span>Remote, or hybrid in Raleigh–Durham</span><a href="mailto:stevenamacchia@gmail.com">stevenamacchia@gmail.com</a></div>
     </div>
   </div>
   <div class="proof">
-    <div><b>Billions of items a month</b><span>I lead moderation of videos, images and text on a gaming platform, and led the move to AI-assisted scanning with human review kept for nuanced and high-risk cases</span></div>
-    <div><b>NCMEC partnership</b><span>I set up the company's NCMEC partnership and the escalation workflows for child safety and severe abuse; CSAM escalations, preservation requests and law enforcement inquiries run through it</span></div>
-    <div><b>$1M+ a year projected saving</b><span>I led the zero-to-one build of a platform-wide user reputation system, improving moderation efficiency and enforcement accuracy</span></div>
-    <div><b>GDPR, CCPA and the DSA</b><span>I direct global privacy and regulatory compliance: DPIAs, ROPA, DSARs, data retention and vendor oversight, plus CSAM reporting to NCMEC</span></div>
+    <div><a href="#exp-0"><b>Billions of items a month</b></a><span>I lead moderation of videos, images and text on a gaming platform, and led the move to AI-assisted scanning with human review kept for nuanced and high-risk cases</span></div>
+    <div><a href="#exp-2"><b>NCMEC partnership</b></a><span>I set up the company's NCMEC partnership and the escalation workflows for child safety and severe abuse; CSAM escalations, preservation requests and law enforcement inquiries run through it</span></div>
+    <div><a href="#exp-1"><b>$1M+ a year projected saving</b></a><span>I led the zero-to-one build of a platform-wide user reputation system, improving moderation efficiency and enforcement accuracy</span></div>
+    <div><a href="#exp-0"><b>GDPR, CCPA and the DSA</b></a><span>I direct global privacy and regulatory compliance: DPIAs, ROPA, DSARs, data retention and vendor oversight, plus CSAM reporting to NCMEC</span></div>
   </div>
 </div></header>
-<main>
+<main id="main">
   <section id="experience"><div class="wrap">
     <div class="sec-h"><h2>Experience</h2><p class="big">From moderation team lead to head of Trust &amp; Safety</p></div>
     <ol class="exp">
-      <li><time>Sep 2024 – now</time><div><h3>Head of Global Compliance and Trust &amp; Safety</h3><span class="org">Medal</span></div><p>Lead compliance and Trust &amp; Safety for a gaming UGC platform moderating billions of videos, images and text submissions a month: AI-assisted moderation, privacy (GDPR, CCPA, DSA), youth safety, and CSAM escalations with NCMEC and law enforcement. Manage the vendor budget across multiple AI moderation and transcription vendors.</p></li>
-      <li><time>Jan – Sep 2024</time><div><h3>Safety Manager</h3><span class="org">Medal</span></div><p>Led the zero-to-one build of a platform-wide user reputation system, projected to save $1M+ a year while improving moderation efficiency and enforcement accuracy. Led the migration to AI-assisted moderation and scanning for visual and text content.</p></li>
-      <li><time>Jan 2022 – Jan 2024</time><div><h3>Program Manager, Trust &amp; Safety</h3><span class="org">Medal</span></div><p>Built out the Trust &amp; Safety program for a gaming platform handling millions of items a day: enforcement guidance, escalation workflows for child safety and severe harm, and the company's partnership with NCMEC. Introduced AI-assisted detection with human oversight for nuanced and high-risk cases.</p></li>
-      <li><time>2020 – 2022</time><div><h3>Program Manager, Community Operations</h3><span class="org">Medal</span></div><p>Built Medal's first Trust &amp; Safety team, alongside its community, social and support functions. Wrote the Community Standards and enforcement playbooks from scratch.</p></li>
-      <li><time>2017 – 2020</time><div><h3>Trust &amp; Safety Team Lead</h3><span class="org">Cognizant</span></div><p>Managed three team managers, each leading about 30 moderation and community operations staff, and sent urgent policy guidance across a site of more than 300 moderators. Promoted to Supervisor in 2018.</p></li>
+      <li id="exp-0"><time>Sep 2024 – now</time><div><h3>Head of Global Compliance and Trust &amp; Safety</h3><span class="org">Medal</span></div><p>Lead compliance and Trust &amp; Safety for a gaming UGC platform moderating billions of videos, images and text submissions a month: AI-assisted moderation, privacy (GDPR, CCPA, DSA), youth safety, and CSAM escalations with NCMEC and law enforcement. Manage the vendor budget across multiple AI moderation and transcription vendors.</p></li>
+      <li id="exp-1"><time>Jan – Sep 2024</time><div><h3>Safety Manager</h3><span class="org">Medal</span></div><p>Led the zero-to-one build of a platform-wide user reputation system, projected to save $1M+ a year while improving moderation efficiency and enforcement accuracy. Led the migration to AI-assisted moderation and scanning for visual and text content.</p></li>
+      <li id="exp-2"><time>Jan 2022 – Jan 2024</time><div><h3>Program Manager, Trust &amp; Safety</h3><span class="org">Medal</span></div><p>Built out the Trust &amp; Safety program for a gaming platform handling millions of items a day: enforcement guidance, escalation workflows for child safety and severe harm, and the company's partnership with NCMEC. Introduced AI-assisted detection with human oversight for nuanced and high-risk cases.</p></li>
+      <li id="exp-3"><time>2020 – 2022</time><div><h3>Program Manager, Community Operations</h3><span class="org">Medal</span></div><p>Built Medal's first Trust &amp; Safety team, alongside its community, social and support functions. Wrote the Community Standards and enforcement playbooks from scratch.</p></li>
+      <li id="exp-4"><time>2017 – 2020</time><div><h3>Trust &amp; Safety Team Lead</h3><span class="org">Cognizant</span></div><p>Managed three team managers, each leading about 30 moderation and community operations staff, and sent urgent policy guidance across a site of more than 300 moderators. Promoted to Supervisor in 2018.</p></li>
     </ol>
     <div class="row2"><p class="lbl" style="margin:0">What I work on</p><ul class="focus"><li>Policy and enforcement</li><li>Moderation operations</li><li>AI-assisted moderation</li><li>Child and youth safety</li><li>NCMEC and law enforcement</li><li>Privacy: GDPR, CCPA, DSA</li><li>Vendor governance</li><li>Escalations and crisis response</li></ul></div>
     <div class="row2"><p class="lbl" style="margin:0">Education</p><div class="edu"><b>B.A., Humanitarian Intervention</b><span>The New School, New York · 2017</span></div></div>

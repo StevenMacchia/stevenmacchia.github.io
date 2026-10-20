@@ -155,6 +155,8 @@ function shell({title, description, canonical, bodyClass, jsonLd, body, ogImage,
 <meta property="og:url" content="${canonical}"><meta property="og:image" content="${img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${img}">
 <meta name="theme-color" content="#6D5DF6">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=(localStorage.getItem("tswb:theme")||"").replace(/"/g,"");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}})()</script>
 ${ICON}
 ${ANALYTICS}
 ${FONT_LINKS}
@@ -166,10 +168,11 @@ ${EXTRA_CSS}
 </style>
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n` : ""}</head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header><div class="wrap">
   ${NAV}
 </div></header>
-<main${bodyClass ? ` class="${bodyClass}"` : ""}>
+<main id="main"${bodyClass ? ` class="${bodyClass}"` : ""}>
 ${body}
 </main>
 ${FOOTER}

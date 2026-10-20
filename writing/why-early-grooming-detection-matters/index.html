@@ -11,6 +11,8 @@
 <meta property="og:url" content="https://stevenmacchia.com/writing/why-early-grooming-detection-matters/"><meta property="og:image" content="https://stevenmacchia.com/writing/why-early-grooming-detection-matters/card.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/writing/why-early-grooming-detection-matters/card.png">
 <meta name="theme-color" content="#6D5DF6">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=(localStorage.getItem("tswb:theme")||"").replace(/"/g,"");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}})()</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%236D5DF6%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,6 +153,34 @@ footer .fine{color:#A0A6C0}
 @media (max-width:560px){.focus{grid-template-columns:1fr}.cta .btn{width:100%}.cta .go{margin:0;width:100%;text-align:center}.proof{grid-template-columns:1fr}.top b{display:none}.top .btn .full{display:none}.top .btn .short{display:inline}.page-h h1{font-size:34px}}
 @media (max-width:900px){.top a.name{display:inline}}
 @media (max-width:560px){.top a.name{display:none}}
+.skip{position:absolute;left:16px;top:-60px;z-index:50;padding:10px 14px;border-radius:10px;background:var(--blue);color:#fff;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+.doors{margin:18px 0 0;font-size:14.5px;color:var(--muted);max-width:60ch}
+.doors a{color:var(--ink);font-weight:500;text-decoration-color:var(--strong);text-underline-offset:3px}
+.doors a:hover{text-decoration-color:var(--blue)}
+.open a{color:var(--ink);font-weight:500;text-decoration-color:var(--strong);text-underline-offset:3px;word-break:break-all}
+.proof a{color:var(--ink);text-decoration:none}
+.proof a:hover{text-decoration:underline;text-decoration-color:var(--blue);text-underline-offset:3px}
+.exp li{scroll-margin-top:24px}
+/* Dark: follows a theme chosen in the workbench (tswb:theme, same origin), else the system preference */
+:root[data-theme="dark"]{--bg:#10121F;--panel:rgba(23,26,43,.72);--ink:#EEF0FA;--muted:#A0A6C0;--line:rgba(238,240,250,.12);--strong:rgba(238,240,250,.28);--blue:#9B8CFF;--good:#3DCB8C;--navy:#0B0C18;--wash:radial-gradient(900px 420px at 72% -10%, rgba(109,93,246,.30), transparent 62%), radial-gradient(700px 380px at 22% 0%, rgba(255,160,120,.12), transparent 60%);--shadow:0 1px 1px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35)}
+:root[data-theme="dark"] .btn,:root[data-theme="dark"] .top .btn{background:#171A2B;color:var(--ink);box-shadow:none}
+:root[data-theme="dark"] .btn:hover{background:#1C2033}
+:root[data-theme="dark"] .btn.primary{background:linear-gradient(135deg,#6D5DF6,#9B6BFF);border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(109,93,246,.35)}
+:root[data-theme="dark"] .btn.primary:hover{background:linear-gradient(135deg,#7A6BFF,#A77DFF)}
+:root[data-theme="dark"] .show-frame{background:#171A2B}
+:root[data-theme="dark"] .depth li{background:rgba(255,255,255,.04)}
+:root[data-theme="dark"] .wr-search input[type=search]{background:#171A2B}
+:root[data-theme="dark"] .skip{color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#10121F;--panel:rgba(23,26,43,.72);--ink:#EEF0FA;--muted:#A0A6C0;--line:rgba(238,240,250,.12);--strong:rgba(238,240,250,.28);--blue:#9B8CFF;--good:#3DCB8C;--navy:#0B0C18;--wash:radial-gradient(900px 420px at 72% -10%, rgba(109,93,246,.30), transparent 62%), radial-gradient(700px 380px at 22% 0%, rgba(255,160,120,.12), transparent 60%);--shadow:0 1px 1px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35)}
+:root:not([data-theme="light"]) .btn,:root:not([data-theme="light"]) .top .btn{background:#171A2B;color:var(--ink);box-shadow:none}
+:root:not([data-theme="light"]) .btn:hover{background:#1C2033}
+:root:not([data-theme="light"]) .btn.primary{background:linear-gradient(135deg,#6D5DF6,#9B6BFF);border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(109,93,246,.35)}
+:root:not([data-theme="light"]) .btn.primary:hover{background:linear-gradient(135deg,#7A6BFF,#A77DFF)}
+:root:not([data-theme="light"]) .show-frame{background:#171A2B}
+:root:not([data-theme="light"]) .depth li{background:rgba(255,255,255,.04)}
+:root:not([data-theme="light"]) .wr-search input[type=search]{background:#171A2B}
+:root:not([data-theme="light"]) .skip{color:#fff}}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
 
 .hb .starthere-note{margin:2px 0 0;font-size:13px;color:var(--muted)}
@@ -201,10 +231,11 @@ footer .fine{color:#A0A6C0}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why early grooming detection matters","description":"Tools that help platforms spot grooming early protect kids and the communities around them.","datePublished":"2026-09-30","dateModified":"2026-10-12","author":{"@type":"Person","name":"Steven Macchia","url":"https://stevenmacchia.com/"},"publisher":{"@type":"Person","name":"Steven Macchia"},"mainEntityOfPage":"https://stevenmacchia.com/writing/why-early-grooming-detection-matters/","image":"https://stevenmacchia.com/writing/why-early-grooming-detection-matters/card.png"}</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header><div class="wrap">
   <nav class="top"><a class="mark" href="https://stevenmacchia.com/" aria-label="Steven Macchia, home"></a><a class="name keep" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://stevenmacchia.com/#projects">Workbench</a><a class="keep" href="https://stevenmacchia.com/ts-handbook/">Handbook</a><a class="keep" href="https://stevenmacchia.com/writing/" aria-current="page">Writing</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download><span class="full">Download resume</span><span class="short">Resume</span></a></nav>
 </div></header>
-<main class="wr">
+<main id="main" class="wr">
   <div class="page-h">
     <p class="lbl" style="margin:0"><a href="https://stevenmacchia.com/writing/">Writing</a> · <a href="https://stevenmacchia.com/writing/child-safety-and-age-assurance/">Child safety and age assurance</a></p>
     <h1 style="margin-top:18px">Why early grooming detection matters</h1>
