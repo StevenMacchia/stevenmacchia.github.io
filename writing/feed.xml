@@ -5,8 +5,22 @@
   <subtitle>What changed in Trust &amp; Safety and why it matters: Steven Macchia on child safety, age assurance, automation and platform compliance. An archive to read, not just a list of links.</subtitle>
   <link href="https://stevenmacchia.com/writing/feed.xml" rel="self"/>
   <link href="https://stevenmacchia.com/writing/"/>
-  <updated>2026-10-16T15:10:31.286Z</updated>
+  <updated>2026-10-19T14:37:39.496Z</updated>
   <author><name>Steven Macchia</name><email>stevenamacchia@gmail.com</email></author>
+  <entry>
+    <id>https://stevenmacchia.com/writing/voice-chat-is-where-safety-in-games-is-furthest-behind/</id>
+    <title>Voice chat is where safety in games is furthest behind</title>
+    <link href="https://stevenmacchia.com/writing/voice-chat-is-where-safety-in-games-is-furthest-behind/"/>
+    <published>2026-10-19T14:37:39.496Z</published>
+    <updated>2026-10-19T14:37:39.496Z</updated>
+    <summary>In many games voice is only looked at after a player reports it, when the audio is already gone, so reports go nowhere and players stop reporting. The tools for proactive voice moderation exist and the law is catching up, so a game that puts children and adults in voice owes children the same protection there as in text.</summary>
+    <content type="html">&lt;p&gt;Voice chat is where safety in games is furthest behind, and I think it's the thing the industry most needs to get right next. A lot of the worst behavior in games happens there: slurs in a match, an adult inappropriately talking to a minor in a party.&lt;/p&gt;
+&lt;p&gt;Text chat got filters and logs years ago. In a lot of games voice still only gets looked at when a player reports it, and by then the audio is gone. The report goes nowhere, the player learns that, and they stop reporting.&lt;/p&gt;
+&lt;p&gt;The tools to do better exist now. In June, Aiba brought Amanda, its grooming and toxicity detection, to voice chat through 4Players' ODIN platform. It transcribes the speech, reads the conversation as a whole for grooming, bullying and radicalization patterns, and sends flagged cases to a human moderator for the final call. Modulate's ToxMod, Musubi and GetStream all do proactive live/near live voice moderation as well.&lt;/p&gt;
+&lt;p&gt;If a game puts kids and adults in voice together, it owes kids the same protection there that it gives them in text. Grooming in games tends to follow a path: a friend request, gifts, private chat, voice, then another app.&lt;/p&gt;
+&lt;p&gt;Games cant keep treating voice as too hard. The tools exist, and the law is catching up, with the UKs Online Safety Act already counting oral communications as user content. If a game has voice and kids play it, ignoring voice is irresponsible, and its a liability the company is choosing to carry. Voice belongs near the top of the safety roadmap if games are willing to expose their users to it as a feature.&lt;/p&gt;
+&lt;p&gt;#TrustAndSafety #ChildSafety #GamingSafety #ContentModeration&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>https://stevenmacchia.com/writing/every-public-safety-claim-is-something-someone-can-test/</id>
     <title>Every public safety claim is something someone can test</title>
