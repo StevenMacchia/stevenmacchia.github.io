@@ -5,8 +5,22 @@
   <subtitle>What changed in Trust &amp; Safety and why it matters: Steven Macchia on child safety, age assurance, automation and platform compliance. An archive to read, not just a list of links.</subtitle>
   <link href="https://stevenmacchia.com/writing/feed.xml" rel="self"/>
   <link href="https://stevenmacchia.com/writing/"/>
-  <updated>2026-10-19T14:37:39.496Z</updated>
+  <updated>2026-10-22T12:24:20.970Z</updated>
   <author><name>Steven Macchia</name><email>stevenamacchia@gmail.com</email></author>
+  <entry>
+    <id>https://stevenmacchia.com/writing/how-small-can-a-t-and-s-team-get-now-that-ai-tools-are-this-good/</id>
+    <title>How small can a T&amp;S team get now that AI tools are this good?</title>
+    <link href="https://stevenmacchia.com/writing/how-small-can-a-t-and-s-team-get-now-that-ai-tools-are-this-good/"/>
+    <published>2026-10-22T12:24:20.970Z</published>
+    <updated>2026-10-22T12:24:20.970Z</updated>
+    <summary>AI tools now handle much of the clear-cut review volume, but regulators expect people who can own and explain decisions: qualified staff on appeals under the DSA and a named accountable person under Ofcom's codes. Automate the clear-cut volume and put the savings into senior owners of policy, appeals, risk and emerging threats.</summary>
+    <content type="html">&lt;p&gt;I've been in a few conversations lately with leaders asking how small a T&amp;amp;S team can get now that the AI tools are this good.&lt;/p&gt;
+&lt;p&gt;The tools are good (great, even). Classifiers that used to flag any clip with a weapon in it can now tell game footage from real violence - and contextually tell you what’s happening in a clip. Models catch coordinated spam and scam patterns faster than a human queue ever could. A lot of review volume that needed people two years ago doesn't anymore.&lt;/p&gt;
+&lt;p&gt;The regulatory side has moved just as fast, in the other direction. The DSA requires qualified staff involved in appeals. Ofcom's codes under the UK Online Safety Act expect a named senior person accountable for illegal content, reporting and complaints, and they list properly funding and staffing moderation teams as a safety measure. Age assurance rules now differ in nearly every major market.&lt;/p&gt;
+&lt;p&gt;Each of those needs someone who understands the policy, the product and the regulator, and who can put their name on a decision.&lt;/p&gt;
+&lt;p&gt;Having built and run a T&amp;amp;S function, my view is to automate the clear-cut volume and put the savings into senior people who own policy, appeals, risk and emerging threats. That setup works for the business and holds up with regulators.&lt;/p&gt;
+&lt;p&gt;Cutting the team down to a singular person and a dashboard (in-house or outsourced) saves money in the short term. Then a regulator asks why the system made a specific call, and nobody inside the company can answer. Fines under the DSA can reach 6% of global turnover, and under the Online Safety Act up to 10% of global revenue. That's a lot more than the headcount you saved.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>https://stevenmacchia.com/writing/voice-chat-is-where-safety-in-games-is-furthest-behind/</id>
     <title>Voice chat is where safety in games is furthest behind</title>
